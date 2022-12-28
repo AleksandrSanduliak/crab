@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Краб Система</title>
-    <link href="../css/normalize.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet">
+    <!-- SETTINGS -->
+    <link href="../css/settings/normalize.css" rel="stylesheet">
+    <link href="../css/settings/main.css" rel="stylesheet">
     <!-- HEADER -->
     <link href="../css/header/header.css" rel="stylesheet">
-    <link href="../css/header/logo.css" rel="stylesheet">
-
+    <link href="../css/header/logo/logo.css" rel="stylesheet">
+    <link href="../css/header/burger/burger.css" rel="stylesheet">
+    <!-- MAIN -->
+    <link href="../css/main/main.css" rel="stylesheet">
+    <link href="../css/main/banner/banner.css" rel="stylesheet">
     <!-- Components -->
     <link href="../css/components/btnConsultation.css" rel="stylesheet">
 
@@ -21,13 +25,33 @@
     <header class="header">
         <div class="header__container">
             <div class="header__inner">
-                <img src="../imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
+                <img src="../imgs/header/logo.svg" alt="Логотип Краб Системы" width="106" height="26px" class="logo">
                 <!-- <button class="consultation">Получить консультацию</button> -->
+                <div class="burger">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Расчет стоимости</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Партнеры</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
         </div>
     </header>
     <main class="main">
+        <div class="banner">
+            <div class="banner__container">
+                <div class="banner__inner">
+                    <h1 class="banner__title">Краб - система</h1>
+                    <h3 class="banner__subtitle">Для быстровозводимых<br>каркасных конструкций</h3>
+
+                    <!-- <img src="../imgs/main/banner.webp" alt=""> -->
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer"></footer>
 </body>

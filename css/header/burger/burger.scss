@@ -1,0 +1,15 @@
+.burger {
+    font-family: "Montserrat-Regular";
+    color: var(--black-color);
+    font-size: 20px;
+    line-height: 24px;
+    flex: 1 1;
+    margin-bottom: 5px;
+}
+.nav{
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Notosans";
+  src: local("NotoSans-Regular"), url("../../fonts/NotoSans/NotoSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: local("Montserrat-Light"), url("../../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: local("OpenSans-Regular"), url("../../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: local("OpenSans-Bold"), url("../../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "OpenSans-Bold";
+  font-size: 72px;
+  line-height: 98px;
+}
+
+h2 {
+  font-family: "OpenSans-Bold";
+  font-size: 40px;
+  line-height: 54px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "OpenSans-Regular";
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h4 {
+  font-family: "OpenSans-Bold";
+  font-size: 24px;
+  line-height: 33px;
+}
+
+[class*=_container] {
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 80rem;
+}
+@media (max-width: 768.98px) {
+  [class*=_container] {
+    padding: 0 0.625rem;
+    max-width: none;
+  }
+}
+@media (max-width: 1024.98px) {
+  [class*=_container] {
+    max-width: 61.938rem;
+    /* 991px */
+  }
+}
+@media (max-width: 1440.98px) {
+  [class*=_container] {
+    /* max-width: 80rem; */
+    /* 1280px */
+    /* 0.625 */
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+:root {
+  --green-color: #319f01;
+  --black-color: #000000;
+}/*# sourceMappingURL=main.css.map */
