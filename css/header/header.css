@@ -3,3 +3,6 @@
     height: 46px;
     position: fixed;
 }
+.header__inner{
+    padding: 28px 0px;
+}

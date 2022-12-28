@@ -59,12 +59,14 @@ h6 {
     }
 }
 
-/* @media(max-width:1440.98px) {
+@media(max-width:1440.98px) {
     [class*=_container] {
-        max-width: 80rem;
-        1280px
+        padding: 0 
+        /* max-width: 80rem; */
+        /* 1280px */
+        /* 0.625 */
     }
-} */
+}
 
 
 a {
