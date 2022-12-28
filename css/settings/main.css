@@ -137,5 +137,7 @@ button {
 
 :root {
   --green-color: #319f01;
+  --darken-color: #298601;
   --black-color: #000000;
+  --active-link: #6C6C6C;
 }/*# sourceMappingURL=main.css.map */

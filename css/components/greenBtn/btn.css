@@ -1,0 +1,10 @@
+.consultation {
+  width: calc(9.313rem + 11.062 * (100vw - 320.98px) / 880);
+  height: calc(1.75rem + 2.188 * (100vw - 320.98px) / 880);
+  padding-bottom: calc(7px + 11 * (100vw - 320.98px) / 880);
+  padding-top: calc(7px + 11 * (100vw - 320.98px) / 880);
+  padding-left: calc(9px + 25 * (100vw - 320.98px) / 880);
+  padding-right: calc(9px + 25 * (100vw - 320.98px) / 880);
+  background: var(--green-color);
+  color: #C4C4C4;
+}/*# sourceMappingURL=btn.css.map */

@@ -1,0 +1,30 @@
+.menu-catalog, .menu-city {
+    font-family: "Montserrat-SemiBold";
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    transition: 1s all ease;
+    &:hover{
+        text-decoration-line: underline;
+    }
+    &:active{
+        color: var(--active-link)
+    }
+}
+.menu-city, .menu-call{
+    color: var(--green-color);
+    &:hover{
+        text-decoration-line: underline;
+    }
+    &:active{
+        color: var(--darken-color);
+    }
+}
+.menu-call{
+    text-decoration-line: underline;
+    &:hover{
+        text-decoration-line:none;
+    }
+    &:active{
+        color: var(--darken-color);
+    }
+}

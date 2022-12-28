@@ -2,15 +2,26 @@
   width: 100vw;
   position: fixed;
   background: #ffffff;
-  box-shadow: 0px 4px 8px rgba(79, 79, 79, 0.14);
+  box-shadow: 0rem 0.25rem 0.5rem rgba(79, 79, 79, 0.14);
 }
 .header__inner {
-  padding: 28px 0px;
+  padding: 1.75rem 0rem;
   display: flex;
   align-items: center;
 }
 @media (max-width: 768.98px) {
   .header__inner {
-    padding: 10px 0px;
+    padding: 0.625rem 0rem;
   }
+}
+.header__contacts-headblock {
+  display: flex;
+  white-space: nowrap;
+}
+.header__contacts-location {
+  flex: 0 0 20%;
+  height: 17px;
+  width: 12px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=header.css.map */
