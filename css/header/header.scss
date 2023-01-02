@@ -8,20 +8,33 @@
         padding: 1.75rem 0rem;
         display: flex;
         align-items: center;
-
+        @media(max-width:991.98px){
+            justify-content: space-between;
+        }
         @media (max-width: 768.98px) {
             padding: 0.625rem 0rem;
         }
     }
 
     &__contacts {
+        display: flex;
+        @media(max-width:1200.98px){
+            display: block;
+        }
+        &-block{
+            display: flex;
+        }
+        &-block+&-block{
+            margin-right: 5px;
+        }
         &-headblock {
             display: flex;
+            flex-wrap: wrap;
             white-space: nowrap;
         }
 
-        &-location {
-            flex: 0 0 20%;
+        &-img {
+            flex: 0 0 2rem;
             height: 17px;
             width: 12px;
             object-fit: contain;

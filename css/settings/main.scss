@@ -14,19 +14,19 @@
     font-family: "Montserrat-Regular";
     src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
     font-weight: 400;
-    font-style: normal;
+    // font-style: normal;
 }
 @font-face {
     font-family: "Montserrat-SemiBold";
     src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
     font-weight: 600;
-    font-style: normal;
+    // font-style: normal;
 }
 @font-face {
     font-family: "Montserrat-Bold";
     src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
     font-weight: 700;
-    font-style: normal;
+    // font-style: normal;
 }
 @font-face {
     font-family: "OpenSans-Regular";
@@ -99,23 +99,16 @@ h4 {
     margin: 0 auto;
     height: 100%;
     max-width: 80rem;
-
-    // @media (max-width: 320px) {
-    //         max-width: none;
-    // }
     @media (max-width: 768.98px) {
-        padding: 0 0.625rem;
+        // padding: 0 0.625rem;
         max-width: none;
     }
     @media (max-width: 1024.98px) {
-        max-width: 61.938rem;
+        max-width: 48rem;
         /* 991px */
     }
-    @media (max-width: 1440.98px) {
-        // background: black;
-        /* max-width: 80rem; */
-        /* 1280px */
-        /* 0.625 */
+    @media(max-width:1440.98px){
+        // padding: 0 calc(10px + (20 - 10) * ((100vw - 320.98px) / 1280))!important;
     }
 }
 

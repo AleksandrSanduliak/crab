@@ -25,26 +25,35 @@
     <header class="header">
         <div class="header__container">
             <div class="header__inner">
-                <img src="../imgs/header/logo.svg" alt="Логотип Краб Системы" width="106" height="26px" class="logo">
+                <img src="../imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
                 <!-- <button class="consultation">Получить консультацию</button> -->
-                <div class="burger">
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Расчет стоимости</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Партнеры</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header__contacts">
-                    <div class="header__contacts-city">
-                        <img src="../imgs/main/map-marker.svg" alt="Знак локации"
-                                class="header__contacts-location">
-                        <p class="header__contacts-headblock"><span class="menu-catalog">Москва</span>
-                        <span class="menu-city">Все города</span></p>
-                    </div>
+                <button class="burger" data-burger>
 
+                </button>
+                <div class="burger__inner" data-menu>
+                    <nav class="nav" >
+                    <ul class="nav__list">
+                        <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Каталог</a></li>
+                        <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Расчет стоимости</a></li>
+                        <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Партнеры</a></li>
+                        <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Отзывы</a></li>
+                    </ul>
+                    </nav>
+
+                    <div class="header__contacts">
+                <div class="header__contacts-block">
+                    <img src="../imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
+                    <p style="width:9rem" class="header__contacts-headblock"><span
+                            class="menu-catalog">Москва</span>
+                        <span class="menu-city">Все города</span></p>
+                </div>
+                <div class="header__contacts-block">
+                    <img src="../imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
+                    <p style="width:13rem" class="header__contacts-headblock"><span
+                            class="menu-catalog">8-985-344-76-46</span>
+                        <span class="menu-city">Все города</span></p>
+                </div>
+                    </div>
                 </div>
             </div>
 
@@ -61,6 +70,12 @@
         </section>
     </main>
     <footer class="footer"></footer>
+    <!-- HEADER SCRIPTS -->
+    <script type="module" src="../js/header/burger.js"></script>
+    <script type="module" src="../js/header/disable-scroll.js"></script>
+    <script type="module" src="../js/header/enable-scroll.js"></script>
+    <script type="module" src="../js/header/vars.js"></script>
+    <!-- HEADER SCRIPTS -->
 </body>
 
 </html>

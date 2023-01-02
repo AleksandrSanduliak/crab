@@ -1,8 +1,11 @@
-.menu-catalog, .menu-city {
+
+.menu-catalog, .menu-city, .menu__items {
+    // width: min-content;
     font-family: "Montserrat-SemiBold";
     font-size: 1.25rem;
     line-height: 1.5rem;
     transition: 1s all ease;
+    flex: 0 0 100%;
     &:hover{
         text-decoration-line: underline;
     }
@@ -10,12 +13,13 @@
         color: var(--active-link)
     }
 }
-.menu-city, .menu-call{
+.menu-city{
     color: var(--green-color);
     &:hover{
         text-decoration-line: underline;
     }
     &:active{
+        text-decoration-line: none;
         color: var(--darken-color);
     }
 }
@@ -28,3 +32,8 @@
         color: var(--darken-color);
     }
 }
+
+// .menu__items{
+// font-family: 'Montserrat';
+// color:black;
+// }

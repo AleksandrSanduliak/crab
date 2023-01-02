@@ -1,25 +1,28 @@
-.menu-catalog, .menu-city {
+.menu-catalog, .menu-city, .menu__items {
   font-family: "Montserrat-SemiBold";
   font-size: 1.25rem;
   line-height: 1.5rem;
   transition: 1s all ease;
+  flex: 0 0 100%;
 }
-.menu-catalog:hover, .menu-city:hover {
+.menu-catalog:hover, .menu-city:hover, .menu__items:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
-.menu-catalog:active, .menu-city:active {
+.menu-catalog:active, .menu-city:active, .menu__items:active {
   color: var(--active-link);
 }
 
-.menu-city, .menu-call {
+.menu-city {
   color: var(--green-color);
 }
-.menu-city:hover, .menu-call:hover {
+.menu-city:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
-.menu-city:active, .menu-call:active {
+.menu-city:active {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   color: var(--darken-color);
 }
 

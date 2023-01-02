@@ -9,17 +9,37 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 991.98px) {
+  .header__inner {
+    justify-content: space-between;
+  }
+}
 @media (max-width: 768.98px) {
   .header__inner {
     padding: 0.625rem 0rem;
   }
 }
+.header__contacts {
+  display: flex;
+}
+@media (max-width: 1200.98px) {
+  .header__contacts {
+    display: block;
+  }
+}
+.header__contacts-block {
+  display: flex;
+}
+.header__contacts-block + .header__contacts-block {
+  margin-right: 5px;
+}
 .header__contacts-headblock {
   display: flex;
+  flex-wrap: wrap;
   white-space: nowrap;
 }
-.header__contacts-location {
-  flex: 0 0 20%;
+.header__contacts-img {
+  flex: 0 0 2rem;
   height: 17px;
   width: 12px;
   -o-object-fit: contain;
