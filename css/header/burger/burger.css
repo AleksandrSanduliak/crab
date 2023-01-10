@@ -1,5 +1,4 @@
 .burger {
-  display: none;
   font-family: "Montserrat-Regular";
   color: var(--black-color);
   font-size: 1.25rem;
@@ -15,7 +14,7 @@
 .burger__inner {
   display: flex;
   flex: 1 1;
-  display: none;
+  transition: 1.5s all ease;
 }
 @media (max-width: 991.98px) {
   .burger__inner {
@@ -25,11 +24,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 1;
+    opacity: 0;
+    visibility: hidden;
     height: 100vh;
     width: 100%;
     flex-flow: wrap;
     background-color: white;
+    margin-top: -200%;
   }
 }
 @media (max-width: 991.98px) {
@@ -68,6 +69,7 @@
 @media (max-width: 991.98px) {
   .nav__list {
     flex-flow: wrap column;
+    margin-top: 4rem;
   }
 }
 .nav__item {
@@ -75,4 +77,10 @@
   max-width: -moz-min-content;
   max-width: min-content;
   white-space: nowrap;
+}
+
+.menu--active {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=burger.css.map */

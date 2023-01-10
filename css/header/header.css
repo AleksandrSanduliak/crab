@@ -27,8 +27,19 @@
     display: block;
   }
 }
+@media (max-width: 991.98px) {
+  .header__contacts {
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
 .header__contacts-block {
   display: flex;
+}
+@media (max-width: 991.98px) {
+  .header__contacts-block {
+    margin-bottom: 1rem;
+  }
 }
 .header__contacts-block + .header__contacts-block {
   margin-right: 5px;

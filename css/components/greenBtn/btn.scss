@@ -1,13 +1,35 @@
 .consultation {
-    width: calc(9.313rem + (20.375 - 9.313) * ((100vw - 320.98px) / 880));
-    height: calc(1.75rem + (3.938 - 1.75) * ((100vw - 320.98px) / 880));
-
-    padding-bottom: calc(7px + (18 - 7) * ((100vw - 320.98px) / 880));
-    padding-top: calc(7px + (18 - 7) * ((100vw - 320.98px) / 880));
-
-    padding-left: calc(9px + (32 - 7) * ((100vw - 320.98px) / 880));
-    padding-right: calc(9px + (32 - 7) * ((100vw - 320.98px) / 880));
+    width: 20.375rem ;
+    height: 1.75rem;
+    padding: 2rem 1.125rem ;
+    border-radius:0.188rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all ease;
 
     background: var(--green-color);
-    color: #C4C4C4;
+    color: white;
+
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.688rem;
+    @media(max-width:1440.98px){
+        width: calc(9.313rem + (20.375 - 9.313) * ((100vw - 20.061rem) / 80)) !important;
+        height: calc(1.75rem + (3.938 - 1.75) * ((100vw - 20.061rem) / 80)) !important;
+    
+        padding-bottom: calc(0.438rem + (1.125 - 0.438) * ((100vw - 20.061rem) / 80)) !important;
+        padding-top: calc(0.438rem + (1.125 - 0.438) * ((100vw - 20.061rem) / 80)) !important;
+    
+        padding-left: calc(0.563rem + (2 - 0.563) * ((100vw - 20.061rem) / 80)) !important;
+        padding-right: calc(0.563rem + (2 - 0.563) * ((100vw - 20.061rem) / 80)) !important;
+        
+        font-size: calc(0.625rem + (1.25 - 0.625) * ((100vw - 20.061rem) / 80)) !important;
+        line-height: calc(0.875rem + (1.688 - 0.875) * ((100vw - 20.061rem) / 80)) !important;;
+    }
+
+
+    &:hover{
+        background: var(--hover-green)
+    }
 }

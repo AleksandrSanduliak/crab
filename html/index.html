@@ -16,6 +16,7 @@
     <!-- MAIN -->
     <link href="../css/main/main.css" rel="stylesheet">
     <link href="../css/main/banner/banner.css" rel="stylesheet">
+    <link href="../css/main/benefits/benefits.css" rel="stylesheet">
     <!-- Components -->
     <link href="../css/components/greenBtn/btn.css" rel="stylesheet">
     <link href="../css/components/menuStatus/menu.css" rel="stylesheet">
@@ -26,9 +27,7 @@
         <div class="header__container">
             <div class="header__inner">
                 <img src="../imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
-                <!-- <button class="consultation">Получить консультацию</button> -->
                 <button class="burger" data-burger>
-
                 </button>
                 <div class="burger__inner" data-menu>
                     <nav class="nav" >
@@ -65,17 +64,66 @@
                 <div class="banner__inner">
                     <h1 class="banner__title">Краб - система</h1>
                     <h3 class="banner__subtitle">Для быстровозводимых<br>каркасных конструкций</h3>
+                     <button class="consultation banner__btn">Получить консультацию</button>
+                </div>
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="benefits__container">
+                <div class="benefits__inner">
+                    <h2 class="benefits__title">ПРЕИМУЩЕСТВА СИСТЕМЫ</h2>
+                    <ul class="list benefits__list">
+                        <li class="item benefits__item">
+                            <img src="../imgs/main/benefits/bodybuilding.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                            <div class="item--text benefits__item--text">
+                                <p class="item--title benefits__item--title">Высокая прочность<br>жёсткость и надёжность</p>
+                                <p class="item--body benefits__item--body">По прочности  соединение с помощью<br>краб-системы ничем не уступает сварке</p>
+                            </div>
+                        </li>
+                        <li class="item benefits__item">
+                            <img src="../imgs/main/benefits/piggy.svg" alt="Иконка списка" class="benefits__item--img">
+                            <div class="benefits__item--text">
+                                <p class="benefits__item--title">Низкая стоимость</p>
+                                <p class="benefits__item--body">Цена конструкции относительна низка, так как:<br> 
+                                    • Вам не нужно использовать сварочный аппарат;<br>
+                                    • работу Вы можете сделать своими руками</p>
+                            </div>
+                        </li>
+                        <li class="item benefits__item">
+                            <img src="../imgs/main/benefits/cycle.svg" alt="Иконка списка" class="benefits__item--img">
+                            <div class="benefits__item--text">
+                                <p class="benefits__item--title">Возможность многоразового<br> использования</p>
+                                <p class="benefits__item--body">Система соединения позволяет перестроить<br> 
+                                    конструкцию – уменьшить, увеличить размеры</p>
+                            </div>
+                        </li>
+                        <li class="item benefits__item">
+                            <img src="../imgs/main/benefits/montage.svg" alt="Иконка списка" class="benefits__item--img">
+                            <div class="benefits__item--text">
+                                <p class="benefits__item--title">Простота монтажа</p>
+                                <p class="benefits__item--body">Для выполнения работ Вам не требуется<br>
+                                    специальных знаний, Краб-система<br>
+                                    закрепляется при помощи болтов и гаек </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer"></footer>
     <!-- HEADER SCRIPTS -->
+    <script type="module" src="../app.js"></script>
     <script type="module" src="../js/header/burger.js"></script>
     <script type="module" src="../js/header/disable-scroll.js"></script>
     <script type="module" src="../js/header/enable-scroll.js"></script>
     <script type="module" src="../js/header/vars.js"></script>
     <!-- HEADER SCRIPTS -->
+
+    <!-- MAIN SCRIPTS -->
+    <script type="module" src="../js/main/padding.js"></script>
+    <!-- MAIN SCRIPTS -->
+
 </body>
 
 </html>

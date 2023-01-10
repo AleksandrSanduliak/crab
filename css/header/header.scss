@@ -21,8 +21,16 @@
         @media(max-width:1200.98px){
             display: block;
         }
+        @media(max-width:991.98px){
+            
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
         &-block{
             display: flex;
+            @media(max-width:991.98px){ 
+                margin-bottom: 1rem;
+            }
         }
         &-block+&-block{
             margin-right: 5px;

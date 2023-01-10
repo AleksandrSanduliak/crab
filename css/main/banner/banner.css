@@ -3,5 +3,27 @@
   background-image: url(/imgs/main/banner.webp);
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-size: 100% 100%;
+  padding-top: 8.375rem;
+  padding-bottom: 8.375rem;
+}
+@media (max-width: 1440.98px) {
+  .banner {
+    padding-top: calc(1.688rem + 6.687 * (100vw - 20.061rem) / 80) !important;
+    padding-bottom: calc(1.688rem + 6.687 * (100vw - 20.061rem) / 80) !important;
+  }
+}
+.banner__subtitle {
+  margin-top: 0.188rem;
+}
+.banner__btn {
+  margin-top: 3.5rem;
+}
+@media (max-width: 1440.98px) {
+  .banner__btn {
+    margin-top: calc(0.813rem + 2.687 * (100vw - 20.061rem) / 80) !important;
+  }
 }/*# sourceMappingURL=banner.css.map */

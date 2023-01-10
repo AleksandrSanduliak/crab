@@ -4,40 +4,46 @@
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Montserrat-Light";
     src: local("Montserrat-Light"), url("../../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Montserrat-Regular";
     src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
     font-weight: 400;
-    // font-style: normal;
+    font-style: normal;
 }
+
 @font-face {
     font-family: "Montserrat-SemiBold";
     src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
     font-weight: 600;
-    // font-style: normal;
+    font-style: normal;
 }
+
 @font-face {
     font-family: "Montserrat-Bold";
     src: local("Montserrat-Regular"), url("../../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
     font-weight: 700;
-    // font-style: normal;
+    font-style: normal;
 }
+
 @font-face {
     font-family: "OpenSans-Regular";
     src: local("OpenSans-Regular"), url("../../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
-    // font-weight: 400;
-    // font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
+
 @font-face {
     font-family: "OpenSans-Bold";
     src: local("OpenSans-Bold"), url("../../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -70,44 +76,63 @@ h6 {
     padding: 0;
     margin: 0;
 }
+
 h1 {
-    
-    font-family: "OpenSans-Bold";
-    font-size: 72px;
-    line-height: 98px;
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 4.5rem; // 72px
+    line-height: 6.125rem;
+    text-transform: uppercase;
+    @media(max-width:1440.98px) {
+        font-size: calc(1.25rem + (4.5 - 1.25) * ((100vw - 20.061rem) / 80)) !important;
+        line-height: calc(1.688rem + (6.125 - 1.688) * ((100vw - 20.061rem) / 80)) !important;
+    }
 }
+
 h2 {
-    font-family: "OpenSans-Bold";
-    font-size: 40px;
-    line-height: 54px;
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.375rem;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+    @media(max-width:1440.98px) {
+        font-size: calc(1.125rem + (2.5 - 1.25) * ((100vw - 20.061rem) / 80)) !important;
+        line-height: calc(1.563rem + (3.375 - 1.688) * ((100vw - 20.061rem) / 80)) !important;
+    }
 }
+
 h3 {
-    // font-family: "Opensans-Regular";
-    font-family: "OpenSans-Regular";
+    font-family: "OpenSans-Regular", sans-serif;
     font-size: 32px;
     line-height: 40px;
+    @media(max-width:1440.98px) {
+        font-size: calc(0.563rem + (2 - 0.563) * ((100vw - 20.061rem) / 80)) !important;
+        line-height: calc(0.813rem + (1.688 - 0.813) * ((100vw - 20.061rem) / 80)) !important;
+    }
 }
+
 h4 {
-    font-family: 'OpenSans-Bold';
+    font-family: 'OpenSans-Bold', sans-serif;
     font-size: 24px;
     line-height: 33px;
 }
+
 [class*="_container"] {
     padding: 0 1.25rem;
     margin: 0 auto;
     height: 100%;
     max-width: 80rem;
+
     @media (max-width: 768.98px) {
         // padding: 0 0.625rem;
         max-width: none;
     }
-    @media (max-width: 1024.98px) {
+
+    @media (max-width: 991.98px) {
         max-width: 48rem;
         /* 991px */
     }
-    @media(max-width:1440.98px){
+
+    @media(max-width:1440.98px) {
         // padding: 0 calc(10px + (20 - 10) * ((100vw - 320.98px) / 1280))!important;
     }
 }
@@ -129,6 +154,7 @@ button {
 
 :root {
     --green-color: #319f01;
+    --hover-green: #3BBB03;
     --darken-color: #298601;
     --black-color: #000000;
     --active-link: #6C6C6C;
