@@ -8,4 +8,5 @@
        { "src": "/(.*)", "dest": "/app.js" }
     ],
     "buildCommand": "npm run dev app.js"
+
  }
