@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Краб Система</title>
     <!-- SETTINGS -->
-    <link href="../css/settings/normalize.css" rel="stylesheet">
-    <link href="./css/settings/main.css" rel="stylesheet">
+    <link href="public/css/settings/normalize.css" rel="stylesheet">
+    <link href="public/css/settings/main.css" rel="stylesheet">
     <!-- HEADER -->
-    <link href="/css/header/header.css" rel="stylesheet">
-    <link href="css/header/logo/logo.css" rel="stylesheet">
-    <link href="../css/header/burger/burger.css" rel="stylesheet">
+    <link href="public/css/header/header.css" rel="stylesheet">
+    <link href="public/css/header/logo/logo.css" rel="stylesheet">
+    <link href="public/css/header/burger/burger.css" rel="stylesheet">
     <!-- MAIN -->
-    <link href="./css/main/main.css" rel="stylesheet">
-    <link href="/css/main/banner/banner.css" rel="stylesheet">
-    <link href="../css/main/benefits/benefits.css" rel="stylesheet">
-    <link href="../css/main/lists/lists.css" rel="stylesheet">
+    <link href="public/css/main/main.css" rel="stylesheet">
+    <link href="public/css/main/banner/banner.css" rel="stylesheet">
+    <link href="public/css/main/benefits/benefits.css" rel="stylesheet">
+    <link href="public/css/main/lists/lists.css" rel="stylesheet">
     <!-- Components -->
-    <link href="../css/components/greenBtn/btn.css" rel="stylesheet">
-    <link href="../css/components/menuStatus/menu.css" rel="stylesheet">
+    <link href="public/css/components/greenBtn/btn.css" rel="stylesheet">
+    <link href="public/css/components/menuStatus/menu.css" rel="stylesheet">
 
 </head>
 
@@ -29,7 +29,7 @@
         <div class="header__container">
             <div class="header__inner">
                 <!-- ../imgs/header/logo.svg -->
-                <img src="/imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
+                <img src="public/imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
                 <button class="burger" aria-label="burger" data-burger>
                 </button>
                 <div class="burger__inner" data-menu>
@@ -44,16 +44,16 @@
 
                     <div class="header__contacts">
                 <div class="header__contacts-block">
-                    <img src="../imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
-                    <p style="width:9rem" class="header__contacts-headblock"><span
-                            class="menu-catalog"></span>
+                    <img src="public/imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
+                    <p style="width:9rem" class="header__contacts-headblock">
+                        <span class="menu-catalog"><%= params[0].city %></span>
                         <span class="menu-city header__city--allcity">Все города</span></p>
 
                 </div>
                 <div class="header__contacts-block">
-                    <img src="../imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
+                    <img src="public/imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
                     <p style="width:13rem" class="header__contacts-headblock"><span
-                            class="menu-catalog">8-985-344-76-46</span>
+                            class="menu-catalog"><%= params[0].phone %></span>
                         <span class="menu-city">Заказать звонок</span></p>
                 </div>
                     </div>
@@ -78,14 +78,14 @@
                     <h2 class="benefits__title">ПРЕИМУЩЕСТВА СИСТЕМЫ</h2>
                     <ul class="list benefits__list">
                         <li class="item benefits__item">
-                            <img src="../imgs/main/benefits/bodybuilding.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                            <img src="public/imgs/main/benefits/bodybuilding.svg" alt="Иконка списка" class="item--img benefits__item--img">
                             <div class="item--text benefits__item--text">
                                 <p class="item--title benefits__item--title">Высокая прочность<br>жёсткость и надёжность</p>
                                 <p class="item--body benefits__item--body">По прочности  соединение с помощью<br>краб-системы ничем не уступает сварке</p>
                             </div>
                         </li>
                         <li class="item benefits__item">
-                            <img src="../imgs/main/benefits/piggy.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                            <img src="public/imgs/main/benefits/piggy.svg" alt="Иконка списка" class="item--img benefits__item--img">
                             <div class="item--text benefits__item--text">
                                 <p class="item--title benefits__item--title">Низкая стоимость</p>
                                 <p class="item--body benefits__item--body">Цена конструкции относительна низка, так как:<br> 
@@ -94,7 +94,7 @@
                             </div>
                         </li>
                         <li class="item benefits__item">
-                            <img src="../imgs/main/benefits/cycle.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                            <img src="public/imgs/main/benefits/cycle.svg" alt="Иконка списка" class="item--img benefits__item--img">
                             <div class="item--text benefits__item--text">
                                 <p class="item--title benefits__item--title">Возможность многоразового<br> использования</p>
                                 <p class="item--body benefits__item--body">Система соединения позволяет перестроить<br> 
@@ -102,7 +102,7 @@
                             </div>
                         </li>
                         <li class="item benefits__item">
-                            <img src="../imgs/main/benefits/montage.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                            <img src="public/imgs/main/benefits/montage.svg" alt="Иконка списка" class="item--img benefits__item--img">
                             <div class="item--text benefits__item--text">
                                 <p class="item--title benefits__item--title">Простота монтажа</p>
                                 <p class="item--body benefits__item--body">Для выполнения работ Вам не требуется<br>
@@ -117,17 +117,15 @@
     </main>
     <footer class="footer"></footer>
     <!-- HEADER SCRIPTS -->
-    <script type="module" src="./js/backend/app.js"></script>
-    <script type="module" src="../js/header/burger.js"></script>
-    <script type="module" src="../js/header/disable-scroll.js"></script>
-    <script type="module" src="../js/header/enable-scroll.js"></script>
-    <script type="module" src="../js/header/vars.js"></script>
+    <script type="module" src="public/js/header/burger.js"></script>
+    <script type="module" src="public/js/header/disable-scroll.js"></script>
+    <script type="module" src="public/js/header/enable-scroll.js"></script>
+    <script type="module" src="public/js/header/vars.js"></script>
 
-    <script type="module" src="./js/header/frontend/front.js"></script>
     <!-- HEADER SCRIPTS -->
 
     <!-- MAIN SCRIPTS -->
-    <script type="module" src="../js/main/padding.js"></script>
+    <script type="module" src="public/js/main/padding.js"></script>
     <!-- MAIN SCRIPTS -->
 
 </body>
