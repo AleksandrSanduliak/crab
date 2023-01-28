@@ -25,11 +25,9 @@ db.query('SELECT * from cityinfo', (err, data) =>{
   if(err) throw err + 'error query'
   // console.log(data, err)
   assinging = Object.assign(datas, data.rows)
-
   db.end()
 })
 app.get('/', (req, res) =>{
   res.render('index', { params: assinging })
 })
-
 app.listen(PORT, () => console.log('server run'))

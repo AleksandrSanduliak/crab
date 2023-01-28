@@ -153,4 +153,5 @@ button {
   --darken-color: #298601;
   --black-color: #000000;
   --active-link: #6C6C6C;
+  --transit: 0.5s all ease;
 }/*# sourceMappingURL=main.css.map */

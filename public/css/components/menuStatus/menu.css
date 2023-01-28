@@ -1,4 +1,5 @@
 .menu-catalog, .menu-city, .menu__items {
+  cursor: pointer;
   font-family: "Montserrat-SemiBold";
   font-size: 1.25rem;
   line-height: 1.5rem;

@@ -22,7 +22,6 @@
     <link href="public/css/components/greenBtn/btn.css" rel="stylesheet">
     <link href="public/css/components/menuStatus/menu.css" rel="stylesheet">
     <link href="public/css/components/dropdown/dropdown.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -44,21 +43,23 @@
                     </nav>
 
                     <div class="header__contacts">
-                <div data-dropdown--wrapper class="header__contacts-block">
+                <div class="header__contacts-block">
                     <img src="public/imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
-                    <p  style="width:9rem" class="header__contacts-headblock">
-                        <span class="menu-catalog"><%= params[0].city %></span>
+                    <p style="width:9rem" class="header__contacts-headblock">
+                        <span class="menu-catalog">City</span>
                         <span data-dropdown class="menu-city header__city--allcity">Все города</span></p>
-                        <ul data-dropdown-list class="dropdown menu__cities">
-                            <% for(key in params) {%>
-                                <li class="menu__cities--item"><%= params[key].city%></li>
-                            <% } %>
+                        <ul data-dropdown-list class="menu__cities">
+
+                                <li class="menu__cities--item">CITY</li>
+                                <li class="menu__cities--item">CITY</li>
+                                <li class="menu__cities--item">CITY</li>
+                                <li class="menu__cities--item">CITY</li>
                         </ul>
                 </div>
                 <div class="header__contacts-block">
                     <img src="public/imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
                     <p style="width:13rem" class="header__contacts-headblock"><span
-                            class="menu-catalog"><%= params[0].phone %></span>
+                            class="menu-catalog">PHONE</span>
                         <span class="menu-city">Заказать звонок</span></p>
                 </div>
                     </div>
@@ -127,6 +128,7 @@
     <script type="module" src="public/js/header/enable-scroll.js"></script>
     <script type="module" src="public/js/header/vars.js"></script>
     <script type="module" src="public/js/header/dropdown/dropdown.js"></script>
+    
     <!-- HEADER SCRIPTS -->
 
     <!-- MAIN SCRIPTS -->
