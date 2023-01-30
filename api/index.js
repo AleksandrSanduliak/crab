@@ -1,5 +1,5 @@
 const app = require('express')();
-const { v4 } = require('uuid');
+// const { v4 } = require('uuid');
 
 app.get('/api', (req, res) => {
   const path = `/api/item/${v4()}`;
@@ -8,7 +8,7 @@ app.get('/api', (req, res) => {
 });
 
 app.get('/', (req, res) =>{
-    res.render('index', { params: assinging })
+    res.render('HELLO')
   })
 
 module.exports = app;

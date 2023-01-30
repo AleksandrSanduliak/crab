@@ -1,8 +1,12 @@
 const { Client } = require('pg')
 const express = require('express')
 const path = require('path')
+
 const app = express()
-const PORT = 5000
+const PORT = process.env.PORT || 5000
+
+const index = require('./api/index')
+app.use('/api/index', index)
 
 app.set('view engine', 'ejs')
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -30,6 +34,6 @@ db.query('SELECT * from cityinfo', (err, data) =>{
 app.get('/', (req, res) =>{
   res.render('index', { params: assinging })
 })
-app.listen(PORT, () => console.log('server run'))
+app.listen(PORT, () => console.log(`server run on ${PORT}`))
 
 module.exports = app;
