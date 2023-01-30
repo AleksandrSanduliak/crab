@@ -6,6 +6,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 const index = require('./api/index')
+app.use(express.json({ extended: false }));
 app.use('/api/index', index)
 
 app.set('view engine', 'ejs')
@@ -36,4 +37,3 @@ app.get('/', (req, res) =>{
 })
 app.listen(PORT, () => console.log(`server run on ${PORT}`))
 
-module.exports = app;
