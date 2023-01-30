@@ -31,3 +31,5 @@ app.get('/', (req, res) =>{
   res.render('index', { params: assinging })
 })
 app.listen(PORT, () => console.log('server run'))
+
+module.exports = app;
