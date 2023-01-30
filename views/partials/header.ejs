@@ -1,0 +1,41 @@
+<header class="header">
+    <div class="header__container">
+        <div class="header__inner">
+            <!-- ../imgs/header/logo.svg -->
+            <img src="public/imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
+            <button class="burger" aria-label="burger" data-burger>
+            </button>
+            <div class="burger__inner" data-menu>
+                <nav class="nav" >
+                <ul class="nav__list">
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Каталог</a></li>
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Расчет стоимости</a></li>
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Партнеры</a></li>
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link menu__items">Отзывы</a></li>
+                </ul>
+                </nav>
+
+                <div class="header__contacts">
+            <div data-dropdown--wrapper class="header__contacts-block">
+                <img src="public/imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
+                <p  style="width:9rem" class="header__contacts-headblock">
+                    <span class="menu-catalog"><%= params[0].city %></span>
+                    <span data-dropdown class="menu-city header__city--allcity">Все города</span></p>
+                    <ul data-dropdown-list class="dropdown menu__cities">
+                        <% for(key in params) {%>
+                            <li class="dropdown__item menu__cities--item"><%= params[key].city%></li>
+                        <% } %>
+                    </ul>
+            </div>
+            <div class="header__contacts-block">
+                <img src="public/imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
+                <p style="width:13rem" class="header__contacts-headblock"><span
+                        class="menu-catalog"><%= params[0].phone %></span>
+                    <span class="menu-city">Заказать звонок</span></p>
+            </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>

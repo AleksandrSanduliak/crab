@@ -1,7 +1,11 @@
 [data-dropdown--wrapper]{
     position: relative !important;
 }
+[data-dropdown]{
+    @media(max-width:768.98px){
 
+    }
+}
 .dropdown{
     position: absolute;
     cursor: pointer;
@@ -18,8 +22,19 @@
     box-shadow: 0px 10px 30px rgba(83, 90, 112, 0.1);
     border-radius: 10px;
     background-color: white;
-    padding: 1.25rem;
+    // padding: 1.25rem;
     transition: var(--transit);
+    @media(max-width:768.98px){
+        position: absolute;
+        // padding: 1.25rem;
+    }
+    &__item{
+        padding: 1.25rem;
+        transition: var(--transit);
+        &:hover{
+            background-color: #dcdcdd;
+        }
+    }
 }
 .dropdown--active{
     width: max-content;
