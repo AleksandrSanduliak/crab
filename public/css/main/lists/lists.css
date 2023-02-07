@@ -1,15 +1,8 @@
 .list {
   display: flex;
   align-items: center;
-  margin-top: 4.7rem;
   flex-wrap: wrap;
 }
-@media (max-width: 1440.98px) {
-  .list {
-    margin-top: calc(2rem + 2.7 * (100vw - 20.061rem) / 80) !important;
-  }
-}
-
 .item {
   display: flex;
   text-align: left;

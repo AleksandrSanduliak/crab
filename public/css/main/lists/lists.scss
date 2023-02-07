@@ -1,10 +1,10 @@
 .list {
     display: flex;
     align-items: center;
-    margin-top: 4.7rem;
+    // margin-top: 4.7rem;
     flex-wrap: wrap;
     @media(max-width:1440.98px) {
-        margin-top: calc(2rem + (4.7 - 2) * ((100vw - 20.061rem) / 80)) !important; 
+        // margin-top: calc(2rem + (4.7 - 2) * ((100vw - 20.061rem) / 80)) !important; 
     }
 }
 

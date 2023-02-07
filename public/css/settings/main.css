@@ -84,6 +84,7 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-family: "OpenSans-Bold", sans-serif;
   font-size: 2.5rem;
   line-height: 3.375rem;
@@ -94,6 +95,8 @@ h2 {
   h2 {
     font-size: calc(1.125rem + 1.25 * (100vw - 20.061rem) / 80) !important;
     line-height: calc(1.563rem + 1.687 * (100vw - 20.061rem) / 80) !important;
+    padding-top: calc(2.1rem + 2.6 * (100vw - 20.061rem) / 80) !important;
+    padding-bottom: calc(2.1rem + 2.6 * (100vw - 20.061rem) / 80) !important;
   }
 }
 
