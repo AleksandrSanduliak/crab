@@ -73,7 +73,6 @@
   }
 }
 .nav__item {
-  max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
   white-space: nowrap;

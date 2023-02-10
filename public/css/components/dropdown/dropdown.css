@@ -7,7 +7,6 @@
   cursor: pointer;
   z-index: 25;
   display: block;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   visibility: hidden;
@@ -35,7 +34,6 @@
 }
 
 .dropdown--active {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   max-height: 500px;

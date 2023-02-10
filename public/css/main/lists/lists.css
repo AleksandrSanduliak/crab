@@ -7,7 +7,6 @@
   display: flex;
   text-align: left;
   color: black;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   flex: 1 1 50%;

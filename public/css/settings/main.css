@@ -90,6 +90,7 @@ h2 {
   line-height: 3.375rem;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  padding: 4.7rem 0;
 }
 @media (max-width: 1440.98px) {
   h2 {

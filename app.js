@@ -21,39 +21,32 @@ const db = new Client({
   password: 'root',
   port: 5432,
 })
-const datas = {}
+
 let assinging = {}
 let product = {}
 db.connect(err =>{
   if(err) throw err +'err message'
   else console.log('db connected')
 })
-// db.query('SELECT * from cityinfo', (err, data) =>{
-//   // console.log(data)
-//   assinging = Object.assign(datas, data.rows)
-//   db.query('SELECT * from product', (err, data2) =>{
-//     product = Object.assign(datas, data.rows)
-//     console.log(data2)
-//   })
-// })
+
 const query1 = new Promise((resolve, reject) => {
   db.query('SELECT * from cityinfo', (err, data1) =>{
-    assinging = Object.assign(datas, data1.rows)
-    // console.log(data1)
-    resolve()
+    resolve(data1)
   })
 })
+.then(data1 => assinging = Object.assign({}, data1.rows))
+.catch(err => console.log(err + 'query1 err'))
+
 const query2 = new Promise((resolve, reject) => {
   db.query('SELECT * from product', (err, data2) =>{
-    product = Object.assign(datas, data2.rows)
-    // console.log(data2)
-    resolve()
+    resolve(data2) 
   })
 })
-
+.then(data2 => product = Object.assign({}, data2.rows))
+.catch(err => console.log(err + 'query1 err'))
 
 app.get('/', (req, res) =>{
-  res.render('index', { params: assinging, products: product })
+  res.render('index', { params: assinging, prod: product,})
 })
 app.listen(PORT, () => console.log(`server run on ${PORT}`))
 

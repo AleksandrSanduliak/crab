@@ -55,13 +55,13 @@
             <div class="products__inner">
                 <h2 class="products__title">ВСЕГДА В НАЛИЧИИ</h2>
                 <div class="products__wrapper">
-                    <% for(key in products) {%>
+                    <% for(key in prod) {%>
                     <div class="products__item">
-                        <img src="/public/imgs/main/products/crab_1.jpg" alt="Фото изделия">
+                        <img src="<%= prod[key].photo %>" alt="Фото изделия">
                         <div class="products__text">
-                            <p class="products__text__title"></p>
+                            <p class="products__text__title"><%= prod[key].name %></p>
                             <div class="products__price">
-                                <p class="products__price--actual"> <% products[key].price %> 20 руб/комп</p>
+                                <p class="products__price--actual"><%= prod[key].price %> руб/комп</p>
                                 <form action="" class="products-form">
                                     <input type="text" value="0" class="products-form--value">
                                     <p class="products-form--text">комп.</p>
@@ -76,6 +76,14 @@
                 </div>
                 
             </div>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="advantages__container">
+            <h2 class="advantages__title">ПОЧЕМУ МЫ?</h2>
+            <ul class="list advantages__list">
+
+            </ul>
         </div>
     </section>
 </main>

@@ -7,8 +7,7 @@
   flex: 0 0 100%;
 }
 .menu-catalog:hover, .menu-city:hover, .menu__items:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .menu-catalog:active, .menu-city:active, .menu__items:active {
   color: var(--active-link);
@@ -18,22 +17,18 @@
   color: var(--green-color);
 }
 .menu-city:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .menu-city:active {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
   color: var(--darken-color);
 }
 
 .menu-call {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .menu-call:hover {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
 }
 .menu-call:active {
   color: var(--darken-color);
