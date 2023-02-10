@@ -1,0 +1,14 @@
+.about{
+    background-image:url("../../../../public/imgs/main/background_crab.png");
+    background-size: 100% 100%;
+    padding-bottom: 4rem;
+
+    @media(max-width:1440.98px) {
+        padding-bottom: calc(1.9rem + (4 - 1.9) * ((100vw - 20.061rem) / 80)) !important;
+    }
+    &__video{
+        @media(max-width:1440.98px){
+            height: calc(15rem + (45 - 15) * ((100vw - 20.061rem) / 80)) !important;;
+        }
+    }
+}

@@ -94,6 +94,8 @@ h2 {
 }
 @media (max-width: 1440.98px) {
   h2 {
+    padding-top: 0;
+    margin-bottom: 0;
     font-size: calc(1.125rem + 1.25 * (100vw - 20.061rem) / 80) !important;
     line-height: calc(1.563rem + 1.687 * (100vw - 20.061rem) / 80) !important;
     padding-top: calc(2.1rem + 2.6 * (100vw - 20.061rem) / 80) !important;

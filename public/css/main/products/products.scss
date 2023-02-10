@@ -1,5 +1,6 @@
 .products {
     padding-bottom: 4rem;
+    background-color: #F2EFED;
 
     @media(max-width:1440.98px) {
         padding-bottom: calc(1.9rem + (4 - 1.9) * ((100vw - 20.061rem) / 80)) !important;
@@ -54,6 +55,7 @@
             font-family: 'Montserrat-Bold';
             line-height: 1.375rem;
             margin-bottom: calc(0.938rem + (1.25 - 0.938) * ((100vw - 20.061rem) / 80)) !important;
+
             @media(max-width:1440.98px) {
                 font-size: calc(1rem + (1.125 - 1) * ((100vw - 20.061rem) / 80)) !important;
                 line-height: calc(1.25rem + (1.567 - 1.25) * ((100vw - 20.061rem) / 80)) !important;
@@ -96,11 +98,14 @@
 
             font-family: 'OpenSans-Regular', sans-serif;
             transition: var(--transit);
-            &:hover, &:active{
+
+            &:hover,
+            &:active {
                 content: 'Отменить';
                 color: #7A7A7A;
                 border-color: #C9C9C9;
             }
+
             @media(max-width:1440.98px) {
                 font-size: calc(0.75rem + (1.125 - 0.75) * ((100vw - 20.061rem) / 80)) !important;
                 line-height: calc(1rem + (1.567 - 1) * ((100vw - 20.061rem) / 80)) !important;

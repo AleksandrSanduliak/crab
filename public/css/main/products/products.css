@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .products {
   padding-bottom: 4rem;
+  background-color: #F2EFED;
 }
 @media (max-width: 1440.98px) {
   .products {
