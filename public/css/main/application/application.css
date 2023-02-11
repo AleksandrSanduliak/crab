@@ -9,4 +9,91 @@
   .application {
     height: calc(24.5rem + 25.125 * (100vw - 20.061rem) / 80) !important;
   }
+}
+.application__container {
+  display: flex;
+  justify-content: flex-end;
+}
+.application__inner {
+  display: flex;
+  align-items: center;
+}
+.application__wrapper {
+  max-width: 28.25rem;
+  text-align: center;
+  padding: 1.568rem;
+  background: #FFFFFF;
+  border-radius: 0.188rem;
+}
+.application__top {
+  margin-top: 1rem;
+  margin-bottom: 2.8rem;
+}
+@media (max-width: 1440.98px) {
+  .application__top {
+    margin-top: calc(0rem + 1 * (100vw - 20.061rem) / 80) !important;
+    margin-bottom: calc(1.5rem + 1.3 * (100vw - 20.061rem) / 80) !important;
+  }
+}
+.application__top--title {
+  padding: 0 !important;
+  color: #2E363E;
+}
+.application__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.application__form--tel, .application__form--email {
+  font-family: "Montserrat-Regular", sans-serif;
+  padding: 1.875rem 1.625rem;
+  width: 21.25rem;
+  height: 5.313rem;
+  border-radius: 0.3rem;
+  border: 0.063rem solid #7A7A7A;
+  margin-bottom: calc(0.625rem + 0.625 * (100vw - 20.061rem) / 80) !important;
+  font-size: 1rem;
+  line-height: 160%;
+}
+@media (max-width: 1440.98px) {
+  .application__form--tel, .application__form--email {
+    padding-top: calc(1rem + 0.875 * (100vw - 20.061rem) / 80) !important;
+    padding-bottom: calc(1rem + 0.875 * (100vw - 20.061rem) / 80) !important;
+    padding-top: calc(1rem + 0.625 * (100vw - 20.061rem) / 80) !important;
+    padding-bottom: calc(1rem + 0.625 * (100vw - 20.061rem) / 80) !important;
+    width: calc(11.375rem + 9.875 * (100vw - 20.061rem) / 80) !important;
+    height: calc(2.813rem + 2.5 * (100vw - 20.061rem) / 80) !important;
+    font-size: calc(0.5rem + 0.5 * (100vw - 20.061rem) / 80) !important;
+  }
+}
+.application__form--tel {
+  background: left 0.1rem center no-repeat url(../../../imgs/main/application/input/Phone.svg);
+  background-size: 1.563rem 1.563rem;
+}
+@media (max-width: 768.98px) {
+  .application__form--tel {
+    background-size: 0.813rem 0.813rem;
+    background-position: left 0.65rem center;
+  }
+}
+.application__form--tel:active, .application__form--tel:focus {
+  background: none;
+}
+.application__form--email {
+  background: left 0.1rem center no-repeat url(../../../imgs/main/application/input/Email.svg);
+  background-size: 1.563rem 1.563rem;
+}
+@media (max-width: 768.98px) {
+  .application__form--email {
+    background-size: 0.813rem 0.813rem;
+    background-position: left 0.65rem center;
+  }
+}
+.application__form--email:active, .application__form--email:focus {
+  background: none;
+}
+.application__form--footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=application.css.map */
