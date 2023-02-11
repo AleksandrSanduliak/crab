@@ -4,7 +4,7 @@
             <div class="banner__inner">
                 <h1 class="banner__title">Краб - система</h1>
                 <h3 class="banner__subtitle">Для быстровозводимых<br>каркасных конструкций</h3>
-                 <button class="consultation banner__btn">Получить консультацию</button>
+                <button class="consultation banner__btn">Получить консультацию</button>
             </div>
         </div>
     </section>
@@ -14,31 +14,36 @@
                 <h2 class="benefits__title">ПРЕИМУЩЕСТВА СИСТЕМЫ</h2>
                 <ul class="list benefits__list">
                     <li class="item benefits__item">
-                        <img src="public/imgs/main/benefits/bodybuilding.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                        <img loading="lazy" src="public/imgs/main/benefits/bodybuilding.svg" alt="Иконка списка"
+                            class="item--img benefits__item--img">
                         <div class="item--text benefits__item--text">
                             <p class="item--title benefits__item--title">Высокая прочность<br>жёсткость и надёжность</p>
-                            <p class="item--body benefits__item--body">По прочности  соединение с помощью<br>краб-системы ничем не уступает сварке</p>
+                            <p class="item--body benefits__item--body">По прочности соединение с помощью<br>краб-системы
+                                ничем не уступает сварке</p>
                         </div>
                     </li>
                     <li class="item benefits__item">
-                        <img src="public/imgs/main/benefits/piggy.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                        <img loading="lazy" src="public/imgs/main/benefits/piggy.svg" alt="Иконка списка"
+                            class="item--img benefits__item--img">
                         <div class="item--text benefits__item--text">
                             <p class="item--title benefits__item--title">Низкая стоимость</p>
-                            <p class="item--body benefits__item--body">Цена конструкции относительна низка, так как:<br> 
+                            <p class="item--body benefits__item--body">Цена конструкции относительна низка, так как:<br>
                                 • Вам не нужно использовать сварочный аппарат;<br>
                                 • работу Вы можете сделать своими руками</p>
                         </div>
                     </li>
                     <li class="item benefits__item">
-                        <img src="public/imgs/main/benefits/cycle.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                        <img loading="lazy" src="public/imgs/main/benefits/cycle.svg" alt="Иконка списка"
+                            class="item--img benefits__item--img">
                         <div class="item--text benefits__item--text">
                             <p class="item--title benefits__item--title">Возможность многоразового<br> использования</p>
-                            <p class="item--body benefits__item--body">Система соединения позволяет перестроить<br> 
+                            <p class="item--body benefits__item--body">Система соединения позволяет перестроить<br>
                                 конструкцию – уменьшить, увеличить размеры</p>
                         </div>
                     </li>
                     <li class="item benefits__item">
-                        <img src="public/imgs/main/benefits/montage.svg" alt="Иконка списка" class="item--img benefits__item--img">
+                        <img loading="lazy" src="public/imgs/main/benefits/montage.svg" alt="Иконка списка"
+                            class="item--img benefits__item--img">
                         <div class="item--text benefits__item--text">
                             <p class="item--title benefits__item--title">Простота монтажа</p>
                             <p class="item--body benefits__item--body">Для выполнения работ Вам не требуется<br>
@@ -57,7 +62,7 @@
                 <div class="products__wrapper">
                     <% for(key in prod) {%>
                     <div class="products__item">
-                        <img src="<%= prod[key].photo %>" alt="Фото изделия">
+                        <img loading="lazy" src="<%= prod[key].photo %>" alt="Фото изделия">
                         <div class="products__text">
                             <p class="products__text__title"><%= prod[key].name %></p>
                             <div class="products__price">
@@ -65,16 +70,16 @@
                                 <form action="" class="products-form">
                                     <input type="text" value="0" class="products-form--value">
                                     <p class="products-form--text">комп.</p>
-                                    
+
                                 </form>
                                 <button type="submit" class="products-form--submit">Заказать</button>
                             </div>
-                            
+
                         </div>
                     </div>
                     <% } %>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -88,7 +93,33 @@
     <section class="about">
         <div class="about__container">
             <h2 class="about__title">НАШЕ ПРОИЗВОДСТВО</h2>
-            <iframe class="about__video" width="100%" height="720" src="https://www.youtube.com/embed/66_Rr32d1rw" title="Производство краб-системы" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="about__video"><div class="youtube" id="66_Rr32d1rw" loading="lazy" src="../../public/imgs/main/about/bcg.webp" 
+            style="width:100%; height:100%;"></div></div>
         </div>
     </section>
+    <section class="application">
+        <div class="application__container">
+            <div class="application__wrapper">
+                <div class="application__top">
+                    <p class="application__top--title"></p>
+                    <p class="application__top--subtitle"></p>
+                </div>
+                <div class="application__body">
+                    <form action="" class="application__form">
+                        <input type="text" class="application__form--tel">
+                        <input type="text" class="application__form--email">
+                        <button type="submit" class="application__sub">Заказать расчёт цены</button>
+                        
+                        <div class="application__form--footer">
+                            <input type="checkbox" class="application__form--check">
+                            <p class="application__form--agreement">Соглашаюсь с 
+                                <span class="application__form--line">условиями передачи данных</span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 </main>

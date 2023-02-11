@@ -1,8 +1,7 @@
 <header class="header">
     <div class="header__container">
         <div class="header__inner">
-            <!-- ../imgs/header/logo.svg -->
-            <img src="public/imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
+            <img loading="lazy" src="public/imgs/header/logo.svg" alt="Логотип Краб Системы" class="logo">
             <button class="burger" aria-label="burger" data-burger>
             </button>
             <div class="burger__inner" data-menu>
@@ -17,7 +16,7 @@
 
                 <div class="header__contacts">
             <div data-dropdown--wrapper class="header__contacts-block">
-                <img src="public/imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
+                <img loading="lazy" src="public/imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
                 <p  style="width:9rem" class="header__contacts-headblock">
                     <span class="menu-catalog city"><%= params[0].city %></span>
                     <span data-dropdown class="menu-city header__city--allcity">Все города</span></p>
@@ -28,7 +27,7 @@
                     </ul>
             </div>
             <div class="header__contacts-block">
-                <img src="public/imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
+                <img loading="lazy" src="public/imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
                 <p style="width:13rem" class="header__contacts-headblock"><span
                         class="menu-catalog phone"><%= params[0].phone %></span>
                     <span class="menu-city">Заказать звонок</span></p>

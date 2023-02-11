@@ -1,0 +1,12 @@
+.application {
+  background: url("../../../imgs/main/application/background_.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 46.625rem;
+}
+@media (max-width: 1440.98px) {
+  .application {
+    height: calc(24.5rem + 25.125 * (100vw - 20.061rem) / 80) !important;
+  }
+}/*# sourceMappingURL=application.css.map */

@@ -8,8 +8,48 @@
     padding-bottom: calc(1.9rem + 2.1 * (100vw - 20.061rem) / 80) !important;
   }
 }
+.about__video {
+  margin: 0 auto;
+  height: 45rem;
+  width: 80rem;
+}
 @media (max-width: 1440.98px) {
   .about__video {
-    height: calc(15rem + 30 * (100vw - 20.061rem) / 80) !important;
+    height: calc(11rem + 30 * (100vw - 20.061rem) / 80) !important;
+    width: calc(15rem + 65 * (100vw - 20.061rem) / 80) !important;
   }
+}
+@media (max-width: 768.98px) {
+  .about__video {
+    width: 100% !important;
+  }
+}
+
+.thumb {
+  height: 100% !important;
+}
+
+.play {
+  background: url(../../../imgs/main/about/play-circle.svg) !important;
+  height: 8.8rem !important;
+  width: 8.8rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1440.98px) {
+  .play {
+    left: calc(40% + 10 * (100vw - 20.061rem) / 80) !important;
+    top: calc(35% + 5 * (100vw - 20.061rem) / 80) !important;
+  }
+}
+@media (max-width: 768.98px) {
+  .play {
+    transform: scale(0.5) !important;
+  }
+}
+
+#player {
+  width: inherit !important;
+  height: inherit !important;
 }/*# sourceMappingURL=about.css.map */

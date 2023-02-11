@@ -157,7 +157,15 @@ button {
     cursor: pointer;
     border: none;
 }
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 
+}
+.main{
+    flex: 1 1 auto;
+}
 :root {
     --green-color: #319f01;
     --hover-green: #3BBB03;

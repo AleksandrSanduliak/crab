@@ -1,8 +1,9 @@
 .header {
   width: 100vw;
   position: fixed;
+  z-index: 2000;
   background: #ffffff;
-  box-shadow: 0rem 0.25rem 0.5rem rgba(79, 79, 79, 0.14);
+  box-shadow: 0rem 0.5rem 0.5rem rgba(79, 79, 79, 0.14);
 }
 .header__inner {
   padding: 1.75rem 0rem;
