@@ -1,0 +1,33 @@
+.partners{
+    &__list{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media(max-width:991.98px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__item{
+        @media(max-width:991.98px){
+            margin-bottom: 3.125rem;
+        }
+        &:first-child{
+            width: 24rem;
+            @media(max-width:1440.98px){ 
+            width: calc(13.375rem + (24 - 13.375) * ((100vw - 20.061rem) / 80)) !important;}
+           
+        }
+        &:nth-child(2){
+            width: 25.625rem;
+            @media(max-width:1440.98px){ 
+                width: calc(14.313rem + (25.625 - 14.313) * ((100vw - 20.061rem) / 80)) !important;}
+        }
+        &:nth-child(3){
+            width: 20.125rem;
+            @media(max-width:1440.98px){ 
+                width: calc(11.25rem + (20.125 - 11.25) * ((100vw - 20.061rem) / 80)) !important;}
+        }
+    }
+}

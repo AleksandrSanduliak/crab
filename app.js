@@ -24,6 +24,7 @@ const db = new Client({
 
 let assinging = {}
 let product = {}
+let reviews = {}
 db.connect(err =>{
   if(err) throw err +'err message'
   else console.log('db connected')
@@ -43,10 +44,15 @@ const query2 = new Promise((resolve, reject) => {
   })
 })
 .then(data2 => product = Object.assign({}, data2.rows))
-.catch(err => console.log(err + 'query1 err'))
-
+.catch(err => console.log(err + 'query2 err'))
+const query3 = new Promise((resolve, reject) =>{
+db.query('SELECT * from reviews', (err, data3) => {
+  resolve(data3)
+})
+}).then(data3 => reviews = Object.assign({}, data3.rows))
+.catch(err => console.log(err + 'query3 err'))
 app.get('/', (req, res) =>{
-  res.render('index', { params: assinging, prod: product,})
+  res.render('index', { params: assinging, prod: product, rev: reviews,})
 })
 app.listen(PORT, () => console.log(`server run on ${PORT}`))
 

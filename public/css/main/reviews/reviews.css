@@ -1,0 +1,12 @@
+.reviews {
+  padding-bottom: 4rem;
+  background: no-repeat center 100% url("../../../imgs/main/reviews/background.webp");
+}
+@media (max-width: 1440.98px) {
+  .reviews {
+    padding-bottom: calc(1.9rem + 2.1 * (100vw - 20.061rem) / 80) !important;
+  }
+}
+.reviews__img {
+  margin: 0 auto;
+}/*# sourceMappingURL=reviews.css.map */

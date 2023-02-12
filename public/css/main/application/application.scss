@@ -7,15 +7,21 @@
 
     @media(max-width:1440.98px) {
         height: calc(24.5rem + (49.625 - 24.5) * ((100vw - 20.061rem) / 80)) !important;
-    }  
-    &__container{
+    }
+
+    &__container {
         display: flex;
         justify-content: flex-end;
+        @media(max-width:425.98px){
+            justify-content: center;
+        }
     }
-    &__inner{
+
+    &__inner {
         display: flex;
         align-items: center;
     }
+
     &__wrapper {
         max-width: 28.25rem;
         text-align: center;
@@ -44,7 +50,8 @@
         flex-direction: column;
         align-items: center;
 
-        &--tel, &--email{
+        &--tel,
+        &--email {
             font-family: 'Montserrat-Regular', sans-serif;
             padding: 1.875rem 1.625rem;
             width: 21.25rem;
@@ -54,7 +61,8 @@
             margin-bottom: calc(0.625rem + (1.25 - 0.625) * ((100vw - 20.061rem) / 80)) !important;
             font-size: 1rem;
             line-height: 160%;
-            @media(max-width:1440.98px){
+
+            @media(max-width:1440.98px) {
                 padding-top: calc(1rem + (1.875 - 1) * ((100vw - 20.061rem) / 80)) !important;
                 padding-bottom: calc(1rem + (1.875 - 1) * ((100vw - 20.061rem) / 80)) !important;
                 padding-top: calc(1rem + (1.625 - 1) * ((100vw - 20.061rem) / 80)) !important;
@@ -63,36 +71,77 @@
                 height: calc(2.813rem + (5.313 - 2.813) * ((100vw - 20.061rem) / 80)) !important;
                 font-size: calc(0.5rem + (1 - 0.5) * ((100vw - 20.061rem) / 80)) !important;
             }
-            &::placeholder {
-
-            }
         }
-        &--tel{
+
+        &--tel {
             background: left 0.1rem center no-repeat url(../../../imgs/main/application/input/Phone.svg);
             background-size: 1.563rem 1.563rem;
-            @media(max-width:768.98px){
+
+            @media(max-width:768.98px) {
                 background-size: 0.813rem 0.813rem;
                 background-position: left 0.65rem center;
             }
-            &:active, &:focus{
+
+            &:active,
+            &:focus {
                 background: none;
             }
         }
-        &--email{
+
+        &--email {
             background: left 0.1rem center no-repeat url(../../../imgs/main/application/input/Email.svg);
             background-size: 1.563rem 1.563rem;
-            @media(max-width:768.98px){
+
+            @media(max-width:768.98px) {
                 background-size: 0.813rem 0.813rem;
                 background-position: left 0.65rem center;
             }
-            &:active, &:focus{
+
+            &:active,
+            &:focus {
                 background: none;
             }
         }
+
         &--footer {
             display: flex;
-            flex-direction: column;
             align-items: center;
+        }
+
+        &--check {
+            border:  1px solid var(--green-color);
+            border-style: solid;
+            border-right-color: var(--green-color);
+            color: var(--green-color);
+            margin-right: 0.5rem;
+            @media(max-width:768.98px){
+                margin-right: 0.25rem;
+            }
+            &:checked{
+                accent-color: var(--green-color);
+            }
+        }
+        &--agreement{
+            font-family: 'Montserrat-Regular', sans-serif;
+            font-size: 0.688rem;
+            line-height: 130%;
+            color: #7E868E;
+            @media(max-width:375.98px){
+                font-size: 0.475rem;
+            }
+        }
+    }
+
+    &__sub {
+        width: 21.25rem;
+        height: 3.938rem;
+        margin-bottom: 1.25rem;
+
+        @media(max-width:1440.98px) {
+            width: calc(11.375rem + (21.25 - 11.375) * ((100vw - 20.061rem) / 80)) !important;
+            height: calc(2.813rem + (5.313 - 2.813) * ((100vw - 20.061rem) / 80)) !important;
+            font-size: calc(0.813rem + (1.25 - 0.813) * (100vw - 20.061rem) / 80) !important;
+            margin-bottom: calc(0.75rem + (1.25 - 0.75) * (100vw - 20.061rem) / 80) !important;
         }
     }
 
