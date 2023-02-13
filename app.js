@@ -1,4 +1,6 @@
-const { Client } = require('pg')
+const {
+  Client
+} = require('pg')
 const express = require('express')
 const path = require('path')
 
@@ -6,9 +8,15 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 const index = require('./api/index')
-const { resolve } = require('path')
-const { rejects } = require('assert')
-app.use(express.json({ extended: false }));
+const {
+  resolve
+} = require('path')
+const {
+  rejects
+} = require('assert')
+app.use(express.json({
+  extended: false
+}));
 app.use('/api/index', index)
 
 app.set('view engine', 'ejs')
@@ -25,34 +33,45 @@ const db = new Client({
 let assinging = {}
 let product = {}
 let reviews = {}
-db.connect(err =>{
-  if(err) throw err +'err message'
+db.connect(err => {
+  if (err) throw err + 'err message'
   else console.log('db connected')
 })
 
 const query1 = new Promise((resolve, reject) => {
-  db.query('SELECT * from cityinfo', (err, data1) =>{
-    resolve(data1)
+    db.query('SELECT * from cityinfo', (err, data1) => {
+      resolve(data1)
+    })
   })
-})
-.then(data1 => assinging = Object.assign({}, data1.rows))
-.catch(err => console.log(err + 'query1 err'))
+  .then(data1 => {
+    assinging = Object.assign({}, data1.rows)
+  })
+  .catch(err => console.log(err + 'query1 err'))
 
 const query2 = new Promise((resolve, reject) => {
-  db.query('SELECT * from product', (err, data2) =>{
-    resolve(data2) 
+    db.query('SELECT * from product', (err, data2) => {
+      resolve(data2)
+      
+    })
+  })
+  .then(data2 => {
+    product = Object.assign({}, data2.rows)
+  })
+  .catch(err => console.log(err + 'query2 err'))
+const query3 = new Promise((resolve, reject) => {
+    db.query('SELECT * from reviews', (err, data3) => {
+      resolve(data3)
+    })
+  }).then(data3 => {
+    reviews = Object.assign({}, data3.rows)
+  })
+  .catch(err => console.log(err + 'query3 err'))
+
+app.get('/', (req, res) => {
+  res.render('index', {
+    params: assinging,
+    prod: product,
+    rev: reviews,
   })
 })
-.then(data2 => product = Object.assign({}, data2.rows))
-.catch(err => console.log(err + 'query2 err'))
-const query3 = new Promise((resolve, reject) =>{
-db.query('SELECT * from reviews', (err, data3) => {
-  resolve(data3)
-})
-}).then(data3 => reviews = Object.assign({}, data3.rows))
-.catch(err => console.log(err + 'query3 err'))
-app.get('/', (req, res) =>{
-  res.render('index', { params: assinging, prod: product, rev: reviews,})
-})
 app.listen(PORT, () => console.log(`server run on ${PORT}`))
-
