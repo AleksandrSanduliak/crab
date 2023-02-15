@@ -1,0 +1,18 @@
+.footer{
+    padding: 3rem 0;
+   &__inner{
+    display: flex;
+    justify-content: space-between;
+   }
+   &__logo{
+    display: block;
+   }
+   &__contacts{
+    display: flex;
+    justify-content: flex-end;
+    width: 30.625rem;
+    @media(max-width:1440.98px){
+        flex: 1 1 auto;
+    }
+   }
+}

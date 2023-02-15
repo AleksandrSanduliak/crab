@@ -1,0 +1,9 @@
+.maps{
+    @media(max-width:1440.98px){
+        height: calc(18.75rem + (35.438 - 18.75) * ((100vw - 20.061rem) / 80)) !important;
+    }
+
+}
+.ymaps-2-1-79-gotoymaps, .ymaps-2-1-79-gototaxi__container, .ymaps-2-1-79-gototech{
+    display: none !important;
+}

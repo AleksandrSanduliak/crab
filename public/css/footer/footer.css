@@ -1,0 +1,20 @@
+.footer {
+  padding: 3rem 0;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  display: block;
+}
+.footer__contacts {
+  display: flex;
+  justify-content: flex-end;
+  width: 30.625rem;
+}
+@media (max-width: 1440.98px) {
+  .footer__contacts {
+    flex: 1 1 auto;
+  }
+}/*# sourceMappingURL=footer.css.map */
