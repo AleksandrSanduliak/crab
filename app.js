@@ -38,40 +38,40 @@ db.connect(err => {
   else console.log('db connected')
 })
 
-const query1 = new Promise((resolve, reject) => {
-    db.query('SELECT * from cityinfo', (err, data1) => {
-      resolve(data1)
-    })
-  })
-  .then(data1 => {
-    assinging = Object.assign({}, data1.rows)
-  })
-  .catch(err => console.log(err + 'query1 err'))
+// const query1 = new Promise((resolve, reject) => {
+//     db.query('SELECT * from cityinfo', (err, data1) => {
+//       resolve(data1)
+//     })
+//   })
+//   .then(data1 => {
+//     assinging = Object.assign({}, data1.rows)
+//   })
+//   .catch(err => console.log(err + 'query1 err'))
 
-const query2 = new Promise((resolve, reject) => {
-    db.query('SELECT * from product', (err, data2) => {
-      resolve(data2)
+// const query2 = new Promise((resolve, reject) => {
+//     db.query('SELECT * from product', (err, data2) => {
+//       resolve(data2)
       
-    })
-  })
-  .then(data2 => {
-    product = Object.assign({}, data2.rows)
-  })
-  .catch(err => console.log(err + 'query2 err'))
-const query3 = new Promise((resolve, reject) => {
-    db.query('SELECT * from reviews', (err, data3) => {
-      resolve(data3)
-    })
-  }).then(data3 => {
-    reviews = Object.assign({}, data3.rows)
-  })
-  .catch(err => console.log(err + 'query3 err'))
+//     })
+//   })
+//   .then(data2 => {
+//     product = Object.assign({}, data2.rows)
+//   })
+//   .catch(err => console.log(err + 'query2 err'))
+// const query3 = new Promise((resolve, reject) => {
+//     db.query('SELECT * from reviews', (err, data3) => {
+//       resolve(data3)
+//     })
+//   }).then(data3 => {
+//     reviews = Object.assign({}, data3.rows)
+//   })
+//   .catch(err => console.log(err + 'query3 err'))
 
 app.get('/', (req, res) => {
   res.render('index', {
-    params: assinging,
-    prod: product,
-    rev: reviews,
+    // params: assinging,
+    // prod: product,
+    // rev: reviews,
   })
 })
 module.exports = app;
