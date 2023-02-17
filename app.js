@@ -74,4 +74,5 @@ app.get('/', (req, res) => {
     rev: reviews,
   })
 })
+module.exports = app;
 app.listen(PORT, () => console.log(`server run on ${PORT}`))

@@ -1,4 +1,4 @@
-ymaps.ready(init);
+
 function init() {
     var myMap = new ymaps.Map("map", {
             center: [55.75, 37.66],
@@ -30,3 +30,4 @@ function init() {
     });
 
 }
+ymaps.ready(init);
