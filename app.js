@@ -8,12 +8,12 @@ const PORT = process.env.PORT || 5000
 const index = require('./api/index')
 const {resolve} = require('path')
 const {rejects} = require('assert')
-app.use(express.json());
-app.use('/index', index)
+// app.use(express.json());
+// app.use('/index', index)
 
 app.set('view engine', 'ejs')
 app.use('/public', express.static(path.join(__dirname, 'public')));
-
+// app.use('/')
 const db = new Client({
   user: 'postgres',
   host: 'localhost',
@@ -26,7 +26,7 @@ let assinging = {}
 let product = {}
 let reviews = {}
 
-app.get('/', (req, res) => {
+app.use('/', (req, res) => {
   res.render('index')
 
 })
