@@ -1,4 +1,3 @@
-const {Client} = require('pg')
 const express = require('express')
 const path = require('path')
 
@@ -8,6 +7,7 @@ const PORT = process.env.PORT || 5000
 const {resolve} = require('path')
 
 app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
