@@ -18,13 +18,18 @@
             <div data-dropdown--wrapper class="header__contacts-block">
                 <img loading="lazy" src="public/imgs/header/map-marker.svg" alt="Знак локации" class="header__contacts-img">
                 <p  style="width:9rem" class="header__contacts-headblock">
+                    <span class="menu-catalog city"><%= params[0].city %></span>
                     <span data-dropdown class="menu-city header__city--allcity">Все города</span></p>
                     <ul data-dropdown-list class="dropdown menu__cities">
-
+                        <% for(key in params) {%>
+                            <li value="<%= params[key].city%>" data-phone="<%= params[key].phone%>" class="dropdown__item menu__cities--item"><%= params[key].city%></li>
+                        <% } %>
                     </ul>
             </div>
             <div class="header__contacts-block">
                 <img loading="lazy" src="public/imgs/header/phone.svg" alt="Иконка телефона" class="header__contacts-img">
+                <p style="width:13rem" class="header__contacts-headblock"><span
+                        class="menu-catalog phone"><%= params[0].phone %></span>
                     <a href="#applicat" class="menu-city">Заказать звонок</a></p>
             </div>
                 </div>
