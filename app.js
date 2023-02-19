@@ -14,13 +14,6 @@ const {rejects} = require('assert')
 app.set('view engine', 'ejs')
 app.use('/public', express.static(path.join(__dirname, 'public')));
 // app.use('/')
-const db = new Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'crabsystem',
-  password: 'root',
-  port: 5432,
-})
 
 let assinging = {}
 let product = {}
