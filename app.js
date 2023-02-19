@@ -8,9 +8,7 @@ const PORT = process.env.PORT || 5000
 const index = require('./api/index')
 const {resolve} = require('path')
 const {rejects} = require('assert')
-// app.use(express.json({
-//   extended: false
-// }));
+app.use(express.json());
 app.use('/index', index)
 
 app.set('view engine', 'ejs')
