@@ -15,3 +15,4 @@ app.get('/', (req, res) => {
   res.render(path.join(__dirname + '/views/index.ejs'))
 })
 app.listen(PORT, () => console.log(`server run on ${PORT}`))
+module.exports = app
