@@ -11,7 +11,7 @@ const {rejects} = require('assert')
 // app.use(express.json({
 //   extended: false
 // }));
-app.use('/api/index', index)
+app.use('/index', index)
 
 app.set('view engine', 'ejs')
 app.use('/public', express.static(path.join(__dirname, 'public')));
