@@ -458,9 +458,6 @@ button {
 
 .banner {
   height: 35.313rem;
-  background-image: url(/public/imgs/main/banner.webp);
-  background-repeat: no-repeat;
-  background-position: top;
   height: max-content;
   background-size: 100% 100%;
   padding-top: 8.375rem;
@@ -569,7 +566,7 @@ button {
 }
 @media (max-width: 1440.98px) {
   .item--body {
-    font-size: calc(0.563rem + 0.562 * (100vw - 20.061rem) / 80) !important;
+    font-size: calc(0.756rem + 0.369 * (100vw - 20.061rem) / 80) !important;
     line-height: calc(0.813rem + 0.687 * (100vw - 20.061rem) / 80) !important;
   }
 }
@@ -913,7 +910,7 @@ button {
 }
 @media (max-width: 375.98px) {
   .application__form--agreement {
-    font-size: 0.475rem;
+    font-size: 0.756rem;
   }
 }
 .application__sub {
@@ -1064,7 +1061,7 @@ button {
 }
 @media (max-width: 1250.98px) {
   .reviews__text {
-    font-size: calc(0.688rem + 0.312 * (100vw - 20.061rem) / 80) !important;
+    font-size: calc(0.756rem + 0.369 * (100vw - 20.061rem) / 80) !important;
     line-height: calc(0.938rem + 0.438 * (100vw - 20.061rem) / 80) !important;
   }
 }

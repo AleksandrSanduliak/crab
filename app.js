@@ -55,12 +55,16 @@ const query3 = new Promise((resolve, reject) => {
   })
   .catch(err => console.log(err + 'query3 err'))
 
-app.get('/', (req, res) => {
-  res.render(path.join(__dirname + '/views/index.ejs'), {
-    params: assinging,
-    prod: product,
-    rev: reviews,
+  app.get('/', (req, res) => {
+    res.render(path.join(__dirname + '/views/index.ejs'), {
+      params: assinging,
+      prod: product,
+      rev: reviews,
+    })
   })
-})
+
 app.listen(PORT, () => console.log(`server run on ${PORT}`))
 module.exports = app
+
+
+
