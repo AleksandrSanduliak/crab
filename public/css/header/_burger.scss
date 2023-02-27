@@ -1,0 +1,91 @@
+.burger {
+    font-family: "Montserrat-Regular";
+    color: var(--black-color);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+    position: relative;
+    z-index: 100;
+
+    @media(max-width:991.98px) {
+        display: flex;
+    }
+
+    &__inner {
+        display: flex;
+        flex: 1 1;
+        transition: 1.5s all ease;
+
+        @media(max-width:991.98px) {
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            opacity: 0;
+            visibility: hidden;
+            height: 100vh;
+            width: 100%;
+
+            flex-flow: wrap;
+            background-color: white;
+
+            margin-top: -200%;
+        }
+    }
+
+    @media(max-width:991.98px) {
+        height: 0.188rem;
+        width: 1.625rem;
+        background-color: black;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            height: 0.188rem;
+            width: 1.625rem;
+            background-color: black;
+            position: absolute;
+        }
+
+        &::before {
+            top: 0.313rem;
+        }
+
+        &::after {
+            top: -0.313rem;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex: 1 1 100%;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 1s all ease;
+        flex: 1 1 100%;
+
+        @media(max-width:991.98px) {
+            flex-flow: wrap column;
+            margin-top: 4rem;
+        }
+    }
+
+    &__item {
+        max-width: min-content;
+        white-space: nowrap;
+    }
+}
+
+.menu--active {
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+}

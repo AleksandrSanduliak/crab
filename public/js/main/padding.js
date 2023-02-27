@@ -1,8 +1,8 @@
 'use strict'
-const pad = async () =>{
+const pad = () =>{
     try{
         const getHeight = document.querySelector('.header').offsetHeight
-        await getHeight
+        // await getHeight
         const main = document.querySelector('.main')
         main.style.paddingTop = `${getHeight}px`
     }

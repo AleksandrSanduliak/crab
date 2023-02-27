@@ -1,9 +1,12 @@
 <main class="main">
-    <section class="banner">
+    <section class="banner" style="background-image: url(/public/imgs/main/banner.webp);
+    background-repeat: no-repeat;
+    background-position: top;">
+    <img src="/public/imgs/main/banner.webp" width="0" height="0" loading="lazy" style="display: none" alt="banner image">
         <div class="banner__container">
             <div class="banner__inner">
                 <h1 class="banner__title">Краб - система</h1>
-                <h2></h2>
+                <h2 style="padding: 0!important; margin: 0!important;"></h2>
                 <h3 class="banner__subtitle">Для быстровозводимых<br>каркасных конструкций</h3>
                 <button class="consultation banner__btn">Получить консультацию</button>
             </div>
@@ -63,13 +66,13 @@
                 <div class="products__wrapper">
                     <% for(key in prod) {%>
                     <div class="products__item">
-                        <img loading="lazy" src="<%= prod[key].photo %>" alt="Фото изделия">
+                        <img loading="lazy" width="302" height="194" src="<%= prod[key].photo %>" alt="Фото изделия">
                         <div class="products__text">
                             <p class="products__text__title"><%= prod[key].name %></p>
                             <div class="products__price">
                                 <p class="products__price--actual"><%= prod[key].price %> руб/комп</p>
                                 <form action="" class="products-form">
-                                    <input type="text" value="0" class="products-form--value">
+                                    <input aria-label="калькулятор количества продукции" type="text" value="0" class="products-form--value">
                                     <p class="products-form--text">комп.</p>
                                 </form>
                                 <button type="submit" class="products-form--submit">Заказать</button>
@@ -91,8 +94,10 @@
     <section class="about">
         <div class="about__container">
             <h2 class="about__title">НАШЕ ПРОИЗВОДСТВО</h2>
-            <div class="about__video"><div class="youtube" id="66_Rr32d1rw" loading="lazy" src="../../public/imgs/main/about/bcg.webp" 
-            style="width:100%; height:100%;"></div></div>
+            <div class="about__video">
+                <div class="youtube" id="66_Rr32d1rw" alt="Превью видео" loading="lazy" src="../../public/imgs/main/about/bcg.webp" 
+            style="width:100%; height:100%;"></div>
+        </div>
         </div>
     </section>
     <section class="application" id="applicat">
@@ -105,12 +110,12 @@
                     </div>
                     <div class="application__body">
                         <form action="" class="application__form">
-                            <input type="text" placeholder="Номер телефона" class="application__form--tel">
-                            <input type="text" placeholder="E-mail" class="application__form--email">
+                            <input aria-label="Ввод номера телефона" type="text" placeholder="Номер телефона" class="application__form--tel">
+                            <input aria-label="Ввод номера email" type="text" placeholder="E-mail" class="application__form--email">
                             <button type="submit" class="consultation application__sub">Заказать расчёт цены</button>
                             
                             <div class="application__form--footer">
-                                <input type="checkbox" class="application__form--check">
+                                <input aria-label="Подтверждение соглашения" type="checkbox" class="application__form--check">
                                 <p class="application__form--agreement">Соглашаюсь с 
                                     <span class="application__form--line">условиями передачи данных</span></p>
                             </div>

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "Notosans";
+    src: local("NotoSans-Regular"), url("/public/fonts/NotoSans/NotoSans-Regular.woff2") format("woff2"),
+    local("NotoSans-Regular"), url("/public/fonts/NotoSans/NotoSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: local("Montserrat-Light"), url("/public/fonts/Montserrat/Montserrat-Light.woff2") format("woff2"),
+    local("Montserrat-Light"), url("/public/fonts/Montserrat/Montserrat-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: local("Montserrat-Regular"), url("/public/fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
+    local("Montserrat-Regular"), url("/public/fonts/Montserrat/Montserrat-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: local("Montserrat-SemiBold"), url("/public/fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2"),
+    local("Montserrat-SemiBold"), url("/public/fonts/Montserrat/Montserrat-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: local("Montserrat-Bold"), url("/public/fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"),
+    local("Montserrat-Bold"), url("/public/fonts/Montserrat/Montserrat-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: local("OpenSans-Regular"), url("/public/fonts/OpenSans/OpenSans-Regular.woff2") format("woff2"),
+    local("OpenSans-Regular"), url("/public/fonts/OpenSans/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: local("OpenSans-Bold"), url("/public/fonts/OpenSans/OpenSans-Bold.woff2") format("woff2"),
+    local("OpenSans-Bold"), url("/public/fonts/OpenSans/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

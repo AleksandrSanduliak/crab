@@ -1,0 +1,72 @@
+.footer {
+    padding: 3rem 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: block;
+        width: 100%;
+        @media(max-width:375.98px){
+            display: none !important;
+        }
+    }
+    &__contacts {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30.625rem;
+
+        @media(max-width:1440.98px) {
+            flex: 1 1 auto;
+
+        }
+
+        @media(max-width:768.98px) {
+            flex-wrap: wrap;
+            flex: unset;
+        }
+        @media(max-width:375.98px){
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        font-family: "Montserrat-Regular", sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.813rem;
+        color: black;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        @media(max-width:1440.98px){
+            font-size: calc(0.813rem + (1.5 - 0.813) * ((100vw - 20.061rem) / 80));
+            line-height: calc(1.063rem + (1.813 - 1.063) * ((100vw - 20.061rem) / 80));
+        }
+        @media(max-width:375.98px){
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        &:not(:last-child) {
+            margin-right: 2rem;
+
+            @media(max-width:768.98px) {
+                margin: 0;
+            }
+            @media(max-width:375.98px){
+                margin-bottom: 0.35rem;
+            } 
+        }
+        &--phone{
+            font-family: "Montserrat-SemiBold", sans-serif;
+            cursor: pointer;
+        }
+    }
+    &-loc, &-phone{
+        margin-right: 0.35rem;
+    }
+
+
+}
