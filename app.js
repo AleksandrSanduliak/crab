@@ -31,11 +31,9 @@ Promise.all([
   data(assinging, 'cityinfo'),
   data(reviews, 'reviews'),
 ]).then(([promise1, promise2, promise3]) => {
-  console.log(promise3)
     return promise1, promise2, promise3
-}).then(()=>{
-
 })
+
 app.get('/', (req, res) => {
   res.render(path.join(__dirname + '/views/index.ejs'), {
     params: assinging,
@@ -43,8 +41,6 @@ app.get('/', (req, res) => {
     rev: reviews,
   })
 })
-// app.get('/data', (req, res) => {
-//   res.send(reviews[0])
-// })
+
 app.listen(PORT, () => console.log(`server run on ${PORT}`))
 module.exports = app

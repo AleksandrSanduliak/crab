@@ -1,8 +1,8 @@
 .banner{
     height: 35.313rem;
-    // background-image: url(/public/imgs/main/banner.webp);
-    // background-repeat: no-repeat;
-    // background-position: top;
+    background-image: url(/public/imgs/main/banner.webp);
+    background-repeat: no-repeat;
+    background-position: top;
     height: max-content;
     background-size: 100% 100%;
     padding-top: 8.375rem;
@@ -10,6 +10,9 @@
     @media(max-width:1440.98px){
         padding-top: calc(1.688rem + (8.375 - 1.688) * ((100vw - 20.061rem) / 80)) !important;
         padding-bottom: calc(1.688rem + (8.375 - 1.688) * ((100vw - 20.061rem) / 80)) !important;
+    }
+    @media(max-width:768.98px){
+        background-image: url(/public/imgs/main/banner-last.webp);
     }
     &__subtitle{
         margin-top: 0.188rem;

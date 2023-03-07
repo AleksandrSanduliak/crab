@@ -1,7 +1,7 @@
 <main class="main">
-    <section class="banner" style="background-image: url(/public/imgs/main/banner.webp);
-    background-repeat: no-repeat;
-    background-position: top;">
+    <section class="banner" 
+
+    >
     <img src="/public/imgs/main/banner.webp" width="0" height="0" loading="lazy" style="display: none" alt="banner image">
         <div class="banner__container">
             <div class="banner__inner">
@@ -66,13 +66,13 @@
                 <div class="products__wrapper">
                     <% for(key in prod) {%>
                         <div class="products__item">
-                            <img loading="lazy" src="<%= prod[key].photo %>" alt="Фото изделия">
+                            <img loading="lazy" width="302" height="194" src="<%= prod[key].photo %>" alt="Фото изделия">
                             <div class="products__text">
                                 <p class="products__text__title"><%= prod[key].name %></p>
                                 <div class="products__price">
                                     <p class="products__price--actual"><%= prod[key].price %> руб/комп</p>
                                     <form action="" class="products-form">
-                                        <input type="text" value="0" class="products-form--value">
+                                        <input type="text" aria-label="количество продукта" for="products-form" aria-labelledby="Выбранное количество продукта компании" value="0" class="products-form--value">
                                         <p class="products-form--text">комп.</p>
                                     </form>
                                     <button type="submit" class="products-form--submit">Заказать</button>
