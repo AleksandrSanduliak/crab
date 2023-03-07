@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const thumb = document.querySelector('.thumb').alt = 'Превью видео'
-})
+'use strict'
+const delay = (time) => {
+    return new Promise((resolve, reject) => setTimeout(resolve, time))
+ }
 window.onload = () => {
     let scriptLoad = () => {
         const script = document.createElement('script')
-        script.async = true
+        script.defer = true
         script.src = 'https://api-maps.yandex.ru/2.1/?apikey=9959df46-8a46-4b4f-b808-4e0c9957f678&lang=ru_RU'
         script.type = 'text/javascript'
         document.getElementsByTagName('head')[0].appendChild(script);
+        console.log('script load')
     }
-
     function init() {
-
         var myMap = new ymaps.Map("map", {
                 center: [55.75, 37.66],
                 zoom: 10
@@ -25,7 +25,7 @@ window.onload = () => {
                 iconColor: '#0095b6',
                 suppressMapOpenBlock: true
             });
-
+            
         myMap.geoObjects
             .add(myPieChart)
         myMap.controls.remove('searchControl')
@@ -40,22 +40,22 @@ window.onload = () => {
         myMap.events.add('click', function () {
             myMap.behaviors.enable('scrollZoom');
         });
-        // ymaps.ready(init)
-    }
+    //    ymaps.ready(init)
+    }   
     let WatchElem = document.getElementById('map')
-    let observer = new IntersectionObserver(function (entr, obs) {
-
+    let observ = new IntersectionObserver(function (entr, obs) {
         entr.forEach((entry) => {
             if (!entry.isIntersecting) return
             obs.unobserve(entry.target)
             const promise = new Promise((resolve, reject) => {
                 resolve(scriptLoad())
-                reject(err)
-            }).then(resolve => {
-                setTimeout(init, 1000)
-            }).catch(err => console.log(err))
+            }).then(() => {
+                return delay(1500)
+            }).then(()=>{
+                init()
+            })
+            .catch(err => console.log(err))
         })
     })
-    observer.observe(WatchElem)
-
+    observ.observe(WatchElem)
 }

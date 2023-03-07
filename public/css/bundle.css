@@ -232,7 +232,7 @@ button {
   align-items: center;
   justify-content: center;
   transition: 1s all ease;
-  background: #005C00;
+  background: var(--green-color);
   color: white;
   font-family: "OpenSans-Bold", sans-serif;
   font-size: 1.25rem;

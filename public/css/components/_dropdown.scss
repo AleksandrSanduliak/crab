@@ -22,11 +22,9 @@
     box-shadow: 0 0.625rem 1.875rem rgba(83, 90, 112, 0.1);
     border-radius: 0.625rem;
     background-color: white;
-    // padding: 1.25rem;
     transition: var(--transit);
     @media(max-width:768.98px){
         position: absolute;
-        // padding: 1.25rem;
     }
     &__item{
         padding: 1.25rem;
