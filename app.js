@@ -26,22 +26,21 @@ async function data(array, collection) {
     console.log(err + ' error promise firebase' + collection)
   }
 }
-
-app.get('/', (req, res) => {
-  Promise.all([
-    data(products, 'product'),
-    data(assinging, 'cityinfo'),
-    data(reviews, 'reviews'),
-  ]).then(([promise1, promise2, promise3]) => {
-  console.log(promise1)
-  console.log(promise2)
+Promise.all([
+  data(products, 'product'),
+  data(assinging, 'cityinfo'),
+  data(reviews, 'reviews'),
+]).then(([promise1, promise2, promise3]) => {
   console.log(promise3)
-  }).then(()=>{
-    res.render(path.join(__dirname + '/views/index.ejs'), {
-      params: assinging,
-      prod: products,
-      rev: reviews,
-    })
+    return promise1, promise2, promise3
+}).then(()=>{
+
+})
+app.get('/', (req, res) => {
+  res.render(path.join(__dirname + '/views/index.ejs'), {
+    params: assinging,
+    prod: products,
+    rev: reviews,
   })
 })
 // app.get('/data', (req, res) => {
