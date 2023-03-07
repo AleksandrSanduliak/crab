@@ -90,7 +90,7 @@ window.onload = () =>{
             const promise = new Promise((resolve, reject) => {
                 resolve(scriptLoad())
             }).then(() => {
-                return delay(1500)
+                return delay(500)
             }).then(()=>{
                 init()
             })
