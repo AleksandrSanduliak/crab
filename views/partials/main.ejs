@@ -65,21 +65,21 @@
                 <h2 class="products__title">ВСЕГДА В НАЛИЧИИ</h2>
                 <div class="products__wrapper">
                     <% for(key in prod) {%>
-                    <div class="products__item">
-                        <img loading="lazy" width="302" height="194" src="<%= prod[key].photo %>" alt="Фото изделия">
-                        <div class="products__text">
-                            <p class="products__text__title"><%= prod[key].name %></p>
-                            <div class="products__price">
-                                <p class="products__price--actual"><%= prod[key].price %> руб/комп</p>
-                                <form action="" class="products-form">
-                                    <input aria-label="калькулятор количества продукции" type="text" value="0" class="products-form--value">
-                                    <p class="products-form--text">комп.</p>
-                                </form>
-                                <button type="submit" class="products-form--submit">Заказать</button>
+                        <div class="products__item">
+                            <img loading="lazy" src="<%= prod[key].photo %>" alt="Фото изделия">
+                            <div class="products__text">
+                                <p class="products__text__title"><%= prod[key].name %></p>
+                                <div class="products__price">
+                                    <p class="products__price--actual"><%= prod[key].price %> руб/комп</p>
+                                    <form action="" class="products-form">
+                                        <input type="text" value="0" class="products-form--value">
+                                        <p class="products-form--text">комп.</p>
+                                    </form>
+                                    <button type="submit" class="products-form--submit">Заказать</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <% } %>
+                        <% } %>
 
             </div>
         </div>
@@ -138,7 +138,15 @@
         <div class="reviews__container">
             <h2 class="reviews__title">ОТЗЫВЫ КЛИЕНТОВ</h2>
             <ul class="reviews__list">
-
+                    <% for(key in rev) {%>
+                    <li class="reviews__item">
+                        <img src="<%= rev[key].img %>" alt="Клиент <%= rev[key].title %>" class="reviews__img">
+                        <div class="reviews__body">
+                            <p class="reviews__name"><%= rev[key].title %></p>
+                            <p class="reviews__text"><%= rev[key].text %></p>
+                        </div>
+                    </li>
+                    <% } %>
             </ul>
         </div>
     </section>
