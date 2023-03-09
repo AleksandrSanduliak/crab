@@ -1,6 +1,6 @@
 
-import { disableScroll } from './disable-scroll';
-import { enableScroll } from './enable-scroll';
+import { disableScroll } from './disable-scroll.js';
+import { enableScroll } from './enable-scroll.js';
 
 (function(){
   const burger = document?.querySelector('[data-burger]');
