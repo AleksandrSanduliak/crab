@@ -1,6 +1,6 @@
-import { disableScroll } from './disable-scroll.js';
-import { enableScroll } from './enable-scroll.js';
-// disable-scroll.js
+import { disableScroll } from '/public/js/header/disable-scroll.js';
+import { enableScroll } from '/public/js/header/enable-scroll.js';
+
 (function(){
   const burger = document?.querySelector('[data-burger]');
   const menu = document?.querySelector('[data-menu]');
