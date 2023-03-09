@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     windowEl: window,
     documentEl: document,
     htmlEl: document.documentElement,
