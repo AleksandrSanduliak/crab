@@ -1,4 +1,4 @@
-import vars from '../../../public/js/header/vars.js';
+import vars from './vars.js';
 
 export const disableScroll = () => {
   const fixBlocks = document?.querySelectorAll('.fixed-block');
