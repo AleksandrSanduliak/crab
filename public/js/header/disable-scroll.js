@@ -1,4 +1,4 @@
-import vars from '../../../public/js/header/vars.js';
+import vars from './vars.js';
 
 export const disableScroll = () => {
   const fixBlocks = document?.querySelectorAll('.fixed-block');
@@ -7,7 +7,6 @@ export const disableScroll = () => {
 
   vars.htmlEl.style.scrollBehavior = 'none';
   fixBlocks.forEach(el => { el.style.paddingRight = paddingOffset; });
-  // vars.bodyEl.style.paddingRight = paddingOffset;
   vars.bodyEl.classList.add('dis-scroll');
   vars.bodyEl.dataset.position = pagePosition;
   vars.bodyEl.style.top = `-${pagePosition}px`;
