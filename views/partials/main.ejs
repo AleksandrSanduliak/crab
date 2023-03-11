@@ -121,16 +121,15 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <section class="partners" id="partner">
         <div class="partners__container">
             <h2 class="partners__title">НАШИ ПАРТНЕРЫ</h2>
             <ul class="partners__list">
-                <li class="partners__item"><img src="../../public/imgs/main/partners/sev.webp" alt="Северсталь" width="384" height="126" class="partners__img"></li>
-                <li class="partners__item"><img src="../../public/imgs/main/partners/zavod.webp" alt="Завод теплиц" width="410" height="98" class="partners__img"></li>
-                <li class="partners__item"><img src="../../public/imgs/main/partners/green.webp" alt="Гринхаус" width="322" height="100" class="partners__img"></li>
+                <li class="partners__item"><img src="../../public/imgs/main/partners/sev.webp" loading="lazy" alt="Северсталь" width="384" height="126" class="partners__img"></li>
+                <li class="partners__item"><img src="../../public/imgs/main/partners/zavod.webp" loading="lazy" alt="Завод теплиц" width="410" height="98" class="partners__img"></li>
+                <li class="partners__item"><img src="../../public/imgs/main/partners/green.webp" loading="lazy" alt="Гринхаус" width="322" height="100" class="partners__img"></li>
             </ul>
         </div>
     </section>
@@ -140,7 +139,7 @@
             <ul class="reviews__list">
                     <% for(key in rev) {%>
                     <li class="reviews__item">
-                        <img src="<%= rev[key].img %>" alt="Клиент <%= rev[key].title %>" class="reviews__img">
+                        <img src="<%= rev[key].img %>" loading="lazy" alt="Клиент <%= rev[key].title %>" class="reviews__img">
                         <div class="reviews__body">
                             <p class="reviews__name"><%= rev[key].title %></p>
                             <p class="reviews__text"><%= rev[key].text %></p>

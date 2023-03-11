@@ -1,6 +1,3 @@
-// import { disableScroll } from './disable-scroll.js';
-// import { enableScroll } from './enable-scroll.js';
-
 let vars =  {
   windowEl: window,
   documentEl: document,
