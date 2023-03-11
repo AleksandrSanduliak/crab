@@ -1,19 +1,19 @@
 'use strict'
 const delay = (time) => {
     return new Promise((resolve, reject) => setTimeout(resolve, time))
- }
-window.onload = () =>{
+}
+window.onload = () => {
     //VIDEO
     const watch = document.querySelector('.about__video')
-    const serv = new IntersectionObserver((entr, obs) =>{
+    const serv = new IntersectionObserver((entr, obs) => {
         entr.forEach((entry) => {
-            if(!entry.isIntersecting) return
+            if (!entry.isIntersecting) return
             obs.unobserve(entry.target)
             const makeVideo = () => {
                 const videoS = document.createElement('script')
                 videoS.defer = true
                 videoS.type = 'text/javascript'
-                videoS.src="https://codegena.com/assets/js/youtube-embed.js"
+                videoS.src = "https://codegena.com/assets/js/youtube-embed.js"
                 document.getElementsByTagName('head')[0].appendChild(videoS);
             }
             const makeElem = () => {
@@ -25,13 +25,13 @@ window.onload = () =>{
                 divElem.style.width = '100%'
                 watch.insertAdjacentElement('beforeend', divElem)
             }
-            const promise = new Promise((resolve,reject) => {
+            const promise = new Promise((resolve, reject) => {
                 const asyncVideo = setInterval(makeVideo(), 1000)
                 resolve()
                 reject(new Error('ошибка video promise'))
             }).then(video => {
                 makeElem()
-                setTimeout(()=> {
+                setTimeout(() => {
                     const thumb = document.querySelector('.thumb').alt = 'Превью видео'
                     console.log(thumb)
                 }, 500)
@@ -51,6 +51,7 @@ window.onload = () =>{
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log('script load')
     }
+
     function init() {
         var myMap = new ymaps.Map("map", {
                 center: [55.75, 37.66],
@@ -65,7 +66,7 @@ window.onload = () =>{
                 iconColor: '#0095b6',
                 suppressMapOpenBlock: true
             });
-            
+
         myMap.geoObjects
             .add(myPieChart)
         myMap.controls.remove('searchControl')
@@ -80,21 +81,21 @@ window.onload = () =>{
         myMap.events.add('click', function () {
             myMap.behaviors.enable('scrollZoom');
         });
-    //    ymaps.ready(init)
-    }   
+    }
 
     let observ = new IntersectionObserver(function (entr, obs) {
         entr.forEach((entry) => {
             if (!entry.isIntersecting) return
             obs.unobserve(entry.target)
             const promise = new Promise((resolve, reject) => {
-                resolve(scriptLoad())
+                scriptLoad()
+                resolve()
             }).then(() => {
-                return delay(1300)
-            }).then(()=>{
-                init()
-            })
-            .catch(err => console.log(err))
+                const tim = setTimeout(() => {
+                    init()
+                    clearInterval(tim)
+                }, 700)
+            }).catch(err => console.log(err))
         })
     })
     observ.observe(WatchElem)
