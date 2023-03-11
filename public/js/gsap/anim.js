@@ -1,4 +1,4 @@
-const mobildeWidth = window.matchMedia('(min-width:425.98px)').matches
+const mobildeWidth = window.matchMedia('(min-width:426.98px)').matches
 if(mobildeWidth){
   document.addEventListener('DOMContentLoaded', ()=> {
     gsap.registerPlugin(ScrollTrigger)

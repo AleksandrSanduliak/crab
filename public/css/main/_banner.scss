@@ -12,7 +12,10 @@
         padding-bottom: calc(1.688rem + (8.375 - 1.688) * ((100vw - 20.061rem) / 80)) !important;
     }
     @media(max-width:768.98px){
-        background-image: url(/public/imgs/main/banner-last.webp);
+        background-image: url(/public/imgs/main/banner-mobile.webp);
+    }
+    @media(max-width:425.98px){
+        background-image: url(/public/imgs/main/banner-mobs.webp);
     }
     &__subtitle{
         margin-top: 0.188rem;
