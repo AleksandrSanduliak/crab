@@ -477,11 +477,6 @@ button {
     background-image: url(/public/imgs/main/banner-mobile.webp);
   }
 }
-@media (max-width: 425.98px) {
-  .banner {
-    background-image: url(/public/imgs/main/banner-mobs.webp);
-  }
-}
 .banner__subtitle {
   margin-top: 0.188rem;
 }
