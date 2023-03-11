@@ -45,13 +45,13 @@ window.onload = () => {
     let WatchElem = document.getElementById('map')
     let scriptLoad = () => {
         const script = document.createElement('script')
-        script.defer = true
         script.src = 'https://api-maps.yandex.ru/2.1/?apikey=9959df46-8a46-4b4f-b808-4e0c9957f678&lang=ru_RU'
+        script.defer = true
         script.type = 'text/javascript'
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log('script load')
     }
-
+    
     function init() {
         var myMap = new ymaps.Map("map", {
                 center: [55.75, 37.66],
@@ -66,7 +66,6 @@ window.onload = () => {
                 iconColor: '#0095b6',
                 suppressMapOpenBlock: true
             });
-
         myMap.geoObjects
             .add(myPieChart)
         myMap.controls.remove('searchControl')
@@ -81,7 +80,9 @@ window.onload = () => {
         myMap.events.add('click', function () {
             myMap.behaviors.enable('scrollZoom');
         });
+
     }
+
 
     let observ = new IntersectionObserver(function (entr, obs) {
         entr.forEach((entry) => {
@@ -89,12 +90,9 @@ window.onload = () => {
             obs.unobserve(entry.target)
             const promise = new Promise((resolve, reject) => {
                 scriptLoad()
-                resolve()
+                setTimeout(resolve, 500)
             }).then(() => {
-                const tim = setTimeout(() => {
-                    init()
-                    clearInterval(tim)
-                }, 700)
+                init()
             }).catch(err => console.log(err))
         })
     })
