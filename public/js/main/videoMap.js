@@ -50,8 +50,11 @@ window.onload = () => {
         script.type = 'text/javascript'
         document.getElementsByTagName('head')[0].appendChild(script);
         console.log('script load')
+        script.onload = () => {
+            ymaps.ready(init);
+        }
     }
-    
+
     function init() {
         var myMap = new ymaps.Map("map", {
                 center: [55.75, 37.66],
@@ -80,7 +83,8 @@ window.onload = () => {
         myMap.events.add('click', function () {
             myMap.behaviors.enable('scrollZoom');
         });
-
+        // ymaps.ready(init)
+        console.log('make html')
     }
 
 
@@ -88,12 +92,7 @@ window.onload = () => {
         entr.forEach((entry) => {
             if (!entry.isIntersecting) return
             obs.unobserve(entry.target)
-            const promise = new Promise((resolve, reject) => {
-                scriptLoad()
-                setTimeout(resolve, 500)
-            }).then(() => {
-                init()
-            }).catch(err => console.log(err))
+            scriptLoad()
         })
     })
     observ.observe(WatchElem)
